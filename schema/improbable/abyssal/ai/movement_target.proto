@@ -1,0 +1,23 @@
+syntax = "proto2";
+package schema.improbable.abyssal.ai;
+
+import "improbable/entity_state.proto";
+
+import "improbable/math/coordinates.proto";
+
+// The target of movement
+message MovementTargetData {
+  // The target.
+  optional improbable.math.Coordinates target = 1 [(improbable.option) = true];
+  // The distance to stop from the target.
+  optional float stoppingDistance = 2;
+}
+
+extend improbable.EntityState {
+  optional MovementTargetData movementTarget = 1015
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     

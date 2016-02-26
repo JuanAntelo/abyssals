@@ -1,0 +1,34 @@
+syntax = "proto2";
+package schema.improbable.abyssal.light;
+
+import "improbable/entity_state.proto";
+
+
+
+// Events
+// An entity has entered the light.
+message EntityEnteredLight {
+    // The entity that entered.
+  optional int64 entityId = 1 [(improbable.entity_id) = true];
+}
+     
+// An entity has exited the light.
+message EntityExitedLight {
+    // The entity that exited.
+  optional int64 entityId = 1 [(improbable.entity_id) = true];
+}
+     
+// The targets that are lit by the light.
+message LightTriggersData {
+  repeated EntityEnteredLight entityEnteredLight = 1000 [(improbable.state_event) = true];
+  repeated EntityExitedLight entityExitedLight = 1001 [(improbable.state_event) = true];
+}
+
+extend improbable.EntityState {
+  optional LightTriggersData lightTriggers = 1005
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     

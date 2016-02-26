@@ -1,0 +1,14 @@
+syntax = "proto2";
+package schema.improbable.abyssal.dev;
+
+import "improbable/entity_state.proto";
+
+
+
+// The handled info types.
+enum HandledValueTypes {
+  INT = 0;
+  FLOAT = 1;
+  DOUBLE = 2;
+}
+       

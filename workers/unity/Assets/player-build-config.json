@@ -1,0 +1,30 @@
+{
+  "Deploy": {
+    "FSim": {
+      "Targets": [
+        "StandaloneLinux64?EnableHeadlessMode"
+      ],
+      "Assets": "Streaming"
+    },
+    "Client": {
+      "Targets": [
+        "StandaloneWindows",
+      ],
+      "Assets": "Streaming"
+    }
+  },
+  "Develop": {
+    "FSim": {
+      "Targets": [
+        "Current"
+      ],
+      "Assets": "Streaming"
+    },
+    "Client": {
+      "Targets": [
+        "Current"
+      ],
+      "Assets": "Streaming"
+    }
+  }
+}

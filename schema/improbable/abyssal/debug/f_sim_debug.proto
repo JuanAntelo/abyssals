@@ -1,0 +1,27 @@
+syntax = "proto2";
+package schema.improbable.abyssal.debug;
+
+import "improbable/entity_state.proto";
+
+
+
+// Events
+// A message from the FSim
+message DebugMessage {
+    // The message.
+  optional string message = 1;
+}
+     
+// FSim debugging tool.
+message FSimDebugData {
+  repeated DebugMessage debugMessage = 1000 [(improbable.state_event) = true];
+}
+
+extend improbable.EntityState {
+  optional FSimDebugData fSimDebug = 1011
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     

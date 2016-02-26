@@ -1,0 +1,21 @@
+syntax = "proto2";
+package schema.improbable.abyssal.light;
+
+import "improbable/entity_state.proto";
+
+
+
+// The light sources visible to the AI.
+message VisibleLightSourcesData {
+  // The visible light sources.
+  repeated int64 lightSources = 1 [(improbable.entity_id) = true];
+}
+
+extend improbable.EntityState {
+  optional VisibleLightSourcesData visibleLightSources = 1013
+    [(improbable.entity_state_options) = {
+      state_synchronized: false
+      state_queryable: true
+    }];
+}
+     

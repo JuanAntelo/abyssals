@@ -1,0 +1,13 @@
+syntax = "proto2";
+package schema.improbable.abyssal.dev;
+
+import "improbable/entity_state.proto";
+
+
+
+// Info about client types.
+message ClientInfo {
+    // The engine id.
+  optional string engineId = 1;
+}
+     

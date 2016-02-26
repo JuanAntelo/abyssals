@@ -1,0 +1,21 @@
+syntax = "proto2";
+package schema.improbable.abyssal.attributes;
+
+import "improbable/entity_state.proto";
+
+
+
+// Entity scale.
+message ScaleData {
+  // The scale.
+  optional float current = 1;
+}
+
+extend improbable.EntityState {
+  optional ScaleData scale = 1021
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     

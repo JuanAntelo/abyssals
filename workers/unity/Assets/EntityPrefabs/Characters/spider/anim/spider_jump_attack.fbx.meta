@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 9f480b4bef0004e4e80752010aef5ee0
+timeCreated: 1454003378
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: spider_head_01_01SHJnt
+    100002: //RootNode
+    100004: spider_l_leg_anterior_AnkleSHJnt
+    100006: spider_l_leg_anterior_BallSHJnt
+    100008: spider_l_leg_anterior_HipSHJnt
+    100010: spider_l_leg_anterior_KneeSHJnt
+    100012: spider_l_leg_anterior_ToeSHJnt
+    100014: spider_l_leg_mid_1_AnkleSHJnt
+    100016: spider_l_leg_mid_1_BallSHJnt
+    100018: spider_l_leg_mid_1_HipSHJnt
+    100020: spider_l_leg_mid_1_KneeSHJnt
+    100022: spider_l_leg_mid_1_ToeSHJnt
+    100024: spider_l_leg_mid_2_AnkleSHJnt
+    100026: spider_l_leg_mid_2_BallSHJnt
+    100028: spider_l_leg_mid_2_HipSHJnt
+    100030: spider_l_leg_mid_2_KneeSHJnt
+    100032: spider_l_leg_mid_2_ToeSHJnt
+    100034: spider_l_leg_posterior_AnkleSHJnt
+    100036: spider_l_leg_posterior_BallSHJnt
+    100038: spider_l_leg_posterior_HipSHJnt
+    100040: spider_l_leg_posterior_KneeSHJnt
+    100042: spider_l_leg_posterior_ToeSHJnt
+    100044: spider_l_upper_leg_01_01SHJnt
+    100046: spider_l_upper_leg_01_02SHJnt
+    100048: spider_l_upper_leg_02_01SHJnt
+    100050: spider_l_upper_leg_02_02SHJnt
+    100052: spider_l_upper_leg_03_01SHJnt
+    100054: spider_l_upper_leg_03_02SHJnt
+    100056: spider_l_upper_leg_04_01SHJnt
+    100058: spider_l_upper_leg_04_02SHJnt
+    100060: spider_MAINSHJnt
+    100062: spider_r_leg_anterior_AnkleSHJnt
+    100064: spider_r_leg_anterior_BallSHJnt
+    100066: spider_r_leg_anterior_HipSHJnt
+    100068: spider_r_leg_anterior_KneeSHJnt
+    100070: spider_r_leg_anterior_ToeSHJnt
+    100072: spider_r_leg_mid_1_AnkleSHJnt
+    100074: spider_r_leg_mid_1_BallSHJnt
+    100076: spider_r_leg_mid_1_HipSHJnt
+    100078: spider_r_leg_mid_1_KneeSHJnt
+    100080: spider_r_leg_mid_1_ToeSHJnt
+    100082: spider_r_leg_mid_2_AnkleSHJnt
+    100084: spider_r_leg_mid_2_BallSHJnt
+    100086: spider_r_leg_mid_2_HipSHJnt
+    100088: spider_r_leg_mid_2_KneeSHJnt
+    100090: spider_r_leg_mid_2_ToeSHJnt
+    100092: spider_r_leg_posterior_AnkleSHJnt
+    100094: spider_r_leg_posterior_BallSHJnt
+    100096: spider_r_leg_posterior_HipSHJnt
+    100098: spider_r_leg_posterior_KneeSHJnt
+    100100: spider_r_leg_posterior_ToeSHJnt
+    100102: spider_r_upper_leg_01_01SHJnt
+    100104: spider_r_upper_leg_01_02SHJnt
+    100106: spider_r_upper_leg_02_01SHJnt
+    100108: spider_r_upper_leg_02_02SHJnt
+    100110: spider_r_upper_leg_03_01SHJnt
+    100112: spider_r_upper_leg_03_02SHJnt
+    100114: spider_r_upper_leg_04_01SHJnt
+    100116: spider_r_upper_leg_04_02SHJnt
+    100118: spider_ROOTSHJnt
+    100120: spider_Thorax_01_01SHJnt
+    100122: spider_Thorax_01_02SHJnt
+    400000: spider_head_01_01SHJnt
+    400002: //RootNode
+    400004: spider_l_leg_anterior_AnkleSHJnt
+    400006: spider_l_leg_anterior_BallSHJnt
+    400008: spider_l_leg_anterior_HipSHJnt
+    400010: spider_l_leg_anterior_KneeSHJnt
+    400012: spider_l_leg_anterior_ToeSHJnt
+    400014: spider_l_leg_mid_1_AnkleSHJnt
+    400016: spider_l_leg_mid_1_BallSHJnt
+    400018: spider_l_leg_mid_1_HipSHJnt
+    400020: spider_l_leg_mid_1_KneeSHJnt
+    400022: spider_l_leg_mid_1_ToeSHJnt
+    400024: spider_l_leg_mid_2_AnkleSHJnt
+    400026: spider_l_leg_mid_2_BallSHJnt
+    400028: spider_l_leg_mid_2_HipSHJnt
+    400030: spider_l_leg_mid_2_KneeSHJnt
+    400032: spider_l_leg_mid_2_ToeSHJnt
+    400034: spider_l_leg_posterior_AnkleSHJnt
+    400036: spider_l_leg_posterior_BallSHJnt
+    400038: spider_l_leg_posterior_HipSHJnt
+    400040: spider_l_leg_posterior_KneeSHJnt
+    400042: spider_l_leg_posterior_ToeSHJnt
+    400044: spider_l_upper_leg_01_01SHJnt
+    400046: spider_l_upper_leg_01_02SHJnt
+    400048: spider_l_upper_leg_02_01SHJnt
+    400050: spider_l_upper_leg_02_02SHJnt
+    400052: spider_l_upper_leg_03_01SHJnt
+    400054: spider_l_upper_leg_03_02SHJnt
+    400056: spider_l_upper_leg_04_01SHJnt
+    400058: spider_l_upper_leg_04_02SHJnt
+    400060: spider_MAINSHJnt
+    400062: spider_r_leg_anterior_AnkleSHJnt
+    400064: spider_r_leg_anterior_BallSHJnt
+    400066: spider_r_leg_anterior_HipSHJnt
+    400068: spider_r_leg_anterior_KneeSHJnt
+    400070: spider_r_leg_anterior_ToeSHJnt
+    400072: spider_r_leg_mid_1_AnkleSHJnt
+    400074: spider_r_leg_mid_1_BallSHJnt
+    400076: spider_r_leg_mid_1_HipSHJnt
+    400078: spider_r_leg_mid_1_KneeSHJnt
+    400080: spider_r_leg_mid_1_ToeSHJnt
+    400082: spider_r_leg_mid_2_AnkleSHJnt
+    400084: spider_r_leg_mid_2_BallSHJnt
+    400086: spider_r_leg_mid_2_HipSHJnt
+    400088: spider_r_leg_mid_2_KneeSHJnt
+    400090: spider_r_leg_mid_2_ToeSHJnt
+    400092: spider_r_leg_posterior_AnkleSHJnt
+    400094: spider_r_leg_posterior_BallSHJnt
+    400096: spider_r_leg_posterior_HipSHJnt
+    400098: spider_r_leg_posterior_KneeSHJnt
+    400100: spider_r_leg_posterior_ToeSHJnt
+    400102: spider_r_upper_leg_01_01SHJnt
+    400104: spider_r_upper_leg_01_02SHJnt
+    400106: spider_r_upper_leg_02_01SHJnt
+    400108: spider_r_upper_leg_02_02SHJnt
+    400110: spider_r_upper_leg_03_01SHJnt
+    400112: spider_r_upper_leg_03_02SHJnt
+    400114: spider_r_upper_leg_04_01SHJnt
+    400116: spider_r_upper_leg_04_02SHJnt
+    400118: spider_ROOTSHJnt
+    400120: spider_Thorax_01_01SHJnt
+    400122: spider_Thorax_01_02SHJnt
+    7400000: spider_jump_attack
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

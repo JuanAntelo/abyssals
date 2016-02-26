@@ -1,0 +1,34 @@
+syntax = "proto2";
+package schema.improbable.abyssal.dev;
+
+import "improbable/entity_state.proto";
+
+
+
+// Events
+// Select an entity.
+message SelectEntity {
+    // The selected entity.
+  optional int64 entity = 1 [(improbable.entity_id) = true];
+}
+     
+// Deselect an entity.
+message DeselectEntity {
+    // The deselected entity.
+  optional int64 entity = 1 [(improbable.entity_id) = true];
+}
+     
+// Controls for selecting entities.
+message InspectorEntitySelectorControlsData {
+  repeated SelectEntity selectEntity = 1000 [(improbable.state_event) = true];
+  repeated DeselectEntity deselectEntity = 1001 [(improbable.state_event) = true];
+}
+
+extend improbable.EntityState {
+  optional InspectorEntitySelectorControlsData inspectorEntitySelectorControls = 1019
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     

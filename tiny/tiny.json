@@ -1,0 +1,9 @@
+[
+	{
+		"type":"tiny_client",
+		"total":1000,
+		"per_machine":50,
+		"platform":"none",
+		"extra_args":"--tiny_dummy_client_ai_type=random_walker --tiny_dummy_client_launch_delay=10000"
+	}
+]

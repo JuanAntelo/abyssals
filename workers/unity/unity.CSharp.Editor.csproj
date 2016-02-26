@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F8C79D30-3E60-97E4-D40D-3D66ADDCE59A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Editor:5</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>5.2.2f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_2_2;UNITY_5_2;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_2_2;UNITY_5_2;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\UnityAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WP8.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WP8.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Metro.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Metro.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Tizen.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Tizen.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SamsungTV.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.SamsungTV.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WebGL.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.OSXStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="AmplifyColor">
+      <HintPath>Assets\AmplifyColor\Plugins\AmplifyColor.dll</HintPath>
+    </Reference>
+    <Reference Include="AmplifyColorEditor">
+      <HintPath>Assets\AmplifyColor\Plugins\Editor\AmplifyColorEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Assets\Improbable\Dependencies\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Improbable.GelSharp">
+      <HintPath>Assets\Improbable\Dependencies\Improbable.GelSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>Assets\Improbable\Dependencies\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="JWT">
+      <HintPath>Assets\Improbable\Dependencies\JWT.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>Assets\Improbable\Dependencies\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets\Improbable\Dependencies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>Assets\Improbable\Dependencies\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="RakNetCSharpWrapper">
+      <HintPath>Assets\Improbable\Dependencies\RakNetCSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>Assets\Improbable\Dependencies\System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="PKFx-Helper">
+      <HintPath>Assets\PopcornFX\Scripts\PKFx-Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="PKFx-Runtime">
+      <HintPath>Assets\PopcornFX\Scripts\PKFx-Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="PKFxManager">
+      <HintPath>Assets\PopcornFX\Scripts\PKFxManager.dll</HintPath>
+    </Reference>
+    <Reference Include="PKFx-Editor">
+      <HintPath>Assets\PopcornFX\Scripts\Editor\PKFx-Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-UnityScript-firstpass">
+      <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-UnityScript">
+      <HintPath>Library\ScriptAssemblies\Assembly-UnityScript.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="unity.CSharp.csproj">
+      <Project>{7E182C22-A798-BDAD-9C7D-1FF20524B48E}</Project>
+      <Name>unity.CSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\About.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\AmplifyColorEffectEditor.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\AmplifyColorEffectEditorBase.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\AmplifyColorVolumeEditor.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\AmplifyColorVolumeEditorBase.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\BackBufferHandler.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\CameraCollection.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\EncryptDecrypt.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\FileHandler.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\ImageResult.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\LUTEditor.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\LUTResult.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\LUTSettings.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\LUTWriter.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\PhotoshopConnection.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\PhotoshopEncryptDecrypt.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\PhotoshopHandler.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\PhotoshopProtocol.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\PhotoshopTouchHelper.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\ResolutionSettings.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Editor\ToolSettings.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\WorkerSpecific\Editor\WorkerSpecificAssetEmbeddingPackager.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\WorkerSpecific\Editor\WorkerSpecificBuild.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\WorkerSpecific\Editor\WorkerSpecificExporting.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\WorkerSpecific\Editor\WorkerSpecificPackager.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\WorkerSpecific\Editor\WorkerSpecificPrefabExporter.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\WorkerSpecific\Editor\WorkerSpecificPrefabGenerator.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\WorkerSpecific\Editor\WorkerSpecificPrefabPath.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\WorkerSpecific\Editor\WorkerSpecificSceneProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Assets\EditorPrefabGameObjectLoader.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Build\AssemblyPatchInvoker.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Build\AssetEmbeddingPackager.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Build\DefaultPlayerBuildConfiguration.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Build\IPackager.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Build\IZipPackage.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Build\IonicZipPackage.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Build\Package.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Build\PlayerBuildConfiguation.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Build\SimplePackager.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Build\UnityPlayerBuildMenu.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Build\UnityPlayerBuilder.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Build\UnityPlayerBuilders.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Build\Windows7ZipPackage.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Build\ZlibZipPackage.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Init\LayerCheck.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\PrefabExport\EntityPrefabDirectoryCleaner.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\PrefabExport\EntityPrefabExportMenus.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\PrefabExport\EntityPrefabExporter.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\PrefabExport\IncrementalExportInvoker.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Snapshots\SnapshotApi.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Snapshots\SnapshotLoader.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Snapshots\SnapshotMenu.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Snapshots\SnapshotResponse.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Util\CliArgsUtils.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Util\EditorConstants.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Util\EditorPaths.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Util\TempFolder.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Util\UnityPathUtil.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Util\Validation.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Util\Validators\FirstLetterUppercase.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Util\Validators\NotEmpty.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Util\Validators\OnlyAlphanumeric.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\Util\Validators\Validator.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\WorldExportWizard\EntityExportUtil.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\WorldExportWizard\ObjExporter\ColliderExporter\BoxColliderToObj.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\WorldExportWizard\ObjExporter\ColliderExporter\MeshColliderToObj.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\WorldExportWizard\ObjExporter\MeshExporter.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\WorldExportWizard\ObjExporter\TerrainExporter\TerrainSaveResolution.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\WorldExportWizard\ObjExporter\TerrainExporter\TerrainToObjExporter.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\WorldExportWizard\ObjExporter\WorldObjExporter.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\WorldExportWizard\TerrainToMeshExporter.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\WorldExportWizard\WorldAssetBundleExporter.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\WorldExportWizard\WorldExporter.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Editor\Tools\WorldExportWizard\WorldExporterGUI.cs" />
+    <Compile Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Editor\UVFreeLegacyTopBottomGUI.cs" />
+    <Compile Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Editor\UVFreePBRShaderGUI.cs" />
+    <Compile Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Editor\UVFreePBRShaderTopBottomGUI.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseComponents\AkAmbientInspector.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseComponents\AkBankInspector.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseComponents\AkBaseInspector.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseComponents\AkEnvironmentInspector.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseComponents\AkEnvironmentPortalInspector.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseComponents\AkEventInspector.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseComponents\AkGameObjectInspector.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseComponents\AkInitializerInspector.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseComponents\AkPortalManager.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseComponents\AkStateInspector.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseComponents\AkSwitchInspector.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseComponents\AkUnityEventHandlerInspector.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseComponents\AkWwiseXMLWatcher.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseMenu\Common\AkExampleAppBuilderBase.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseMenu\Common\AkUnityBuilderBase.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseMenu\Common\AkUnityPluginInstallerBase.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseMenu\Common\AkWwiseIdConverter.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseMenu\Windows\AkWwiseMenu_Windows.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseSetupWizard\AkPluginActivator.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseSetupWizard\AkUnitySettingsParser.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseSetupWizard\AkWwisePostImportCallback.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseSetupWizard\AkWwiseSettingsWindow.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseSetupWizard\AkWwiseSetupWindow.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseSetupWizard\AkWwiseSetupWizard.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseWindows\AkWwiseComponentPicker.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseWindows\AkWwisePicker.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseWindows\AkWwiseProjectData.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseWindows\AkWwiseProjectInfo.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseWindows\AkWwiseTreeView.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseWindows\AkWwiseWWUBuilder.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseWindows\AkWwiseXMLBuilder.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseWindows\TreeViewControl\TreeViewControl.cs" />
+    <Compile Include="Assets\Wwise\Editor\WwiseWindows\TreeViewControl\TreeViewItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\AmplifyColor\Readme.txt" />
+    <None Include="Assets\AmplifyColor\Resources\Base.shader" />
+    <None Include="Assets\AmplifyColor\Resources\Blend.shader" />
+    <None Include="Assets\AmplifyColor\Resources\BlendCache.shader" />
+    <None Include="Assets\AmplifyColor\Resources\Common.cginc" />
+    <None Include="Assets\AmplifyColor\Resources\DepthMask.shader" />
+    <None Include="Assets\AmplifyColor\Resources\DepthMaskBlend.shader" />
+    <None Include="Assets\AmplifyColor\Resources\Mask.shader" />
+    <None Include="Assets\AmplifyColor\Resources\MaskBlend.shader" />
+    <None Include="Assets\AmplifyColor\Resources\ProcessOnly.shader" />
+    <None Include="Assets\DeferredNV\DeferredNightVision.shader" />
+    <None Include="Assets\PopcornFX\README.txt" />
+    <None Include="Assets\PopcornFX\Resources\PKFxDistQuickDirtyBlurEffect.shader" />
+    <None Include="Assets\PopcornFX\Resources\PKFxDistortionEffect.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\BlendModesOverlay.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\BlurEffectConeTaps.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\CameraMotionBlur.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\CameraMotionBlurDX11.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ChromaticAberrationShader.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ColorCorrection3DLut.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ColorCorrectionCurves.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ColorCorrectionCurvesSimple.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ColorCorrectionEffect.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ColorCorrectionSelective.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\Contrast Stretch\Adaptation.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\Contrast Stretch\Apply.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\Contrast Stretch\Luminance.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\Contrast Stretch\MinMaxReduction.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ContrastComposite.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ConvertDepth.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\CreaseApply.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\EdgeDetectNormals.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\FisheyeShader.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\GlobalFog.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\GlowCompose.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\GlowConeTap.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\GlowEffectDownsample.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\GrayscaleEffect.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\MotionBlur.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\MotionBlurClear.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\NoiseAndGrain.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\NoiseAndGrainDX11.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\NoiseEffectShaderYUV.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\PrepareSunShaftsBlur.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\RadialBlur.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\SSAOShader.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ScreenSpaceAmbientObscurance.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\SepiaToneEffect.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ShowAlphaChannel.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\SimpleClear.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\SunShaftsComposite.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\Tonemapper.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\TwirlEffect.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\VignettingShader.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\VortexEffect.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_Antialiasing\DLAA.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_Antialiasing\FXAA3Console.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_Antialiasing\FXAAPreset3.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_Antialiasing\NFAA.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_Antialiasing\SSAA.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\Blend.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\MobileBloom.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\MobileBlur.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\VignetteShader.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_DepthOfField\Bokeh34.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_DepthOfField\DepthOfField34.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\frag_ao.cginc" />
+    <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Tonemapper.shader" />
+    <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+    <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+    <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+    <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+    <None Include="Assets\StreamingAssets\desc.txt" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Diffuse Terrain\UVFreeLegacyTerrainDiffuseAddPass.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Diffuse Terrain\UVFreeLegacyTerrainDiffuseFirstPass.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Diffuse\UVFreeLegacyDiffuse.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Diffuse\UVFreeLegacyDiffuseTopBottom.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Specular Terrain\UVFreeLegacyTerrainSpecular-AddPass.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Specular Terrain\UVFreeLegacyTerrainSpecular-Base.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Specular Terrain\UVFreeLegacyTerrainSpecular-FirstPass.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Specular\UVFreeLegacySpecular.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Specular\UVFreeLegacySpecularTopBottom.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Metallic Terrain\UVFreeTerrainStandardMetallic-AddPass.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Metallic Terrain\UVFreeTerrainStandardMetallic-Base.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Metallic Terrain\UVFreeTerrainStandardMetallic-FirstPass.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Metallic\UVFreeStandardMetallic.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Metallic\UVFreeStandardMetallicTopBottom.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Specular Terrain\UVFreeTerrainStandardSpecular-AddPass.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Specular Terrain\UVFreeTerrainStandardSpecular-Base.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Specular Terrain\UVFreeTerrainStandardspecular-FirstPass.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Specular\UVFreeStandardSpecular.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Specular\UVFreeStandardSpecularTopBottom.shader" />
+    <None Include="Assets\UVFreeShaders\readme.txt" />
+    <None Include="Assets\Wwise\Readme.txt" />
+    <None Include="Assets\Wwise\Version.txt" />
+    <None Include="Assets\WwiseSettings.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
+</Project>

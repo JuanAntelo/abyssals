@@ -1,0 +1,21 @@
+syntax = "proto2";
+package schema.improbable.abyssal.labels;
+
+import "improbable/entity_state.proto";
+
+
+
+// The entity name.
+message NameData {
+  // The name that a dev will see.
+  optional string devName = 1;
+}
+
+extend improbable.EntityState {
+  optional NameData name = 1022
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     

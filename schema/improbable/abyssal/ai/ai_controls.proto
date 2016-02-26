@@ -1,0 +1,21 @@
+syntax = "proto2";
+package schema.improbable.abyssal.ai;
+
+import "improbable/entity_state.proto";
+
+import "improbable/math/vector3d.proto";
+
+// The ai controls.
+message AIControlsData {
+  // The current movement.
+  optional improbable.math.Vector3d MovementVector = 1;
+}
+
+extend improbable.EntityState {
+  optional AIControlsData aIControls = 1026
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: false
+    }];
+}
+     

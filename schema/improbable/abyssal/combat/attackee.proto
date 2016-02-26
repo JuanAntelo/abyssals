@@ -1,0 +1,26 @@
+syntax = "proto2";
+package schema.improbable.abyssal.combat;
+
+import "improbable/entity_state.proto";
+
+
+
+// Events
+// The entity was attacked
+message Attacked {
+  
+}
+     
+// Getting attacked.
+message AttackeeData {
+  repeated Attacked attacked = 1000 [(improbable.state_event) = true];
+}
+
+extend improbable.EntityState {
+  optional AttackeeData attackee = 1024
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     

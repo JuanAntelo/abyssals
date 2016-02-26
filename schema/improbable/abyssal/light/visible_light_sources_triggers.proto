@@ -1,0 +1,34 @@
+syntax = "proto2";
+package schema.improbable.abyssal.light;
+
+import "improbable/entity_state.proto";
+
+
+
+// Events
+// Detected a light.
+message DetectedLight {
+    // The light.
+  optional int64 entityId = 1 [(improbable.entity_id) = true];
+}
+     
+// Lost a light.
+message LostLight {
+    // The light.
+  optional int64 entityId = 1 [(improbable.entity_id) = true];
+}
+     
+// Triggers for visible light sources.
+message VisibleLightSourcesTriggersData {
+  repeated DetectedLight detectedLight = 1000 [(improbable.state_event) = true];
+  repeated LostLight lostLight = 1001 [(improbable.state_event) = true];
+}
+
+extend improbable.EntityState {
+  optional VisibleLightSourcesTriggersData visibleLightSourcesTriggers = 1014
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     

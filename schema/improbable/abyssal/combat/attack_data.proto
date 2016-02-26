@@ -1,0 +1,33 @@
+syntax = "proto2";
+package schema.improbable.abyssal.combat;
+
+import "improbable/entity_state.proto";
+
+
+
+// Events
+// Trigger an attack.
+message TriggerAttack {
+  
+}
+     
+// The info for attacks.
+message AttackDataData {
+  // The range of the attack.
+  optional float attackRange = 1;
+  // The time between attacks in seconds.
+  optional float cooldown = 2;
+  // The time remaining in the cooldown in seconds.
+  optional float cooldownRemaining = 3;
+  // Enemies hit in the current attack.
+  repeated int64 hitEnemies = 4 [(improbable.entity_id) = true];  repeated TriggerAttack triggerAttack = 1000 [(improbable.state_event) = true];
+}
+
+extend improbable.EntityState {
+  optional AttackDataData attackData = 1009
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     

@@ -1,0 +1,14 @@
+syntax = "proto2";
+package schema.improbable.abyssal.player;
+
+import "improbable/entity_state.proto";
+
+
+
+// Armor types.
+enum ArmorType {
+  WHITE = 0;
+  BLACK = 1;
+  RED = 2;
+}
+       

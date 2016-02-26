@@ -1,0 +1,23 @@
+syntax = "proto2";
+package schema.improbable.abyssal.attributes;
+
+import "improbable/entity_state.proto";
+
+
+
+// The heath
+message HealthData {
+  // The current health.
+  optional int32 current = 1;
+  // The max health
+  optional int32 max = 2;
+}
+
+extend improbable.EntityState {
+  optional HealthData health = 1007
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     

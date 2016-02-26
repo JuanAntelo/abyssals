@@ -1,0 +1,33 @@
+syntax = "proto2";
+package schema.improbable.abyssal.combat;
+
+import "improbable/entity_state.proto";
+
+
+
+// Events
+// The weapon has hit an entity.
+message HitEntity {
+    // The hit entity.
+  optional int64 target = 1 [(improbable.entity_id) = true];
+}
+     
+// Reset the hit enemies (for another attack
+message ResetHitEnemies {
+  
+}
+     
+// The player attacking
+message AttackControlsData {
+  repeated HitEntity hitEntity = 1000 [(improbable.state_event) = true];
+  repeated ResetHitEnemies resetHitEnemies = 1001 [(improbable.state_event) = true];
+}
+
+extend improbable.EntityState {
+  optional AttackControlsData attackControls = 1010
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     

@@ -1,0 +1,44 @@
+syntax = "proto2";
+package schema.improbable.abyssal.player;
+
+import "improbable/entity_state.proto";
+
+
+
+// Events
+// Use the item in the left hand
+message StartUsingRightHand {
+  
+}
+     
+// Use the item in the left hand
+message StopUsingRightHand {
+  
+}
+     
+// Use the item in the left hand
+message StartUsingLeftHand {
+  
+}
+     
+// Use the item in the left hand
+message StopUsingLeftHand {
+  
+}
+     
+// The player controls.
+message PlayerControlsData {
+  repeated StartUsingRightHand startUsingRightHand = 1000 [(improbable.state_event) = true];
+  repeated StopUsingRightHand stopUsingRightHand = 1001 [(improbable.state_event) = true];
+  repeated StartUsingLeftHand startUsingLeftHand = 1002 [(improbable.state_event) = true];
+  repeated StopUsingLeftHand stopUsingLeftHand = 1003 [(improbable.state_event) = true];
+}
+
+extend improbable.EntityState {
+  optional PlayerControlsData playerControls = 1003
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     

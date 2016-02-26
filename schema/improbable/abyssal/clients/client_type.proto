@@ -1,0 +1,15 @@
+syntax = "proto2";
+package schema.improbable.abyssal.clients;
+
+import "improbable/entity_state.proto";
+
+
+
+// Different client types.
+enum ClientType {
+  PLAYER = 0;
+  GAMEMASTER = 1;
+  DEV = 2;
+  DUMMY = 3;
+}
+       

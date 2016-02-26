@@ -1,0 +1,15 @@
+syntax = "proto2";
+package schema.improbable.abyssal.labels;
+
+import "improbable/entity_state.proto";
+
+
+
+// Possible prefabs that can be built.
+enum PrefabType {
+  SPIDER = 0;
+  WEP_TORC_WOODENTORCH01 = 1;
+  WEP_SWOR_HONSHUSWORD = 2;
+  BONFIRE = 3;
+}
+       

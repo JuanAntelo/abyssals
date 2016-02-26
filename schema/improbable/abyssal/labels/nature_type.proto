@@ -1,0 +1,15 @@
+syntax = "proto2";
+package schema.improbable.abyssal.labels;
+
+import "improbable/entity_state.proto";
+
+
+
+// Possible natures that can be built by the game master.
+enum NatureType {
+  NSWORD = 0;
+  NSPIDER = 1;
+  NTORCH = 2;
+  NBONFIRE = 3;
+}
+       

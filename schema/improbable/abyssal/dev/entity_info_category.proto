@@ -1,0 +1,14 @@
+syntax = "proto2";
+package schema.improbable.abyssal.dev;
+
+import "improbable/entity_state.proto";
+
+
+
+// The category the info falls in for the UI.
+enum EntityInfoCategory {
+  STATS = 0;
+  APPEARANCE = 1;
+  OTHER = 2;
+}
+       

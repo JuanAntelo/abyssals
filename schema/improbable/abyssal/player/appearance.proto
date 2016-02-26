@@ -1,0 +1,21 @@
+syntax = "proto2";
+package schema.improbable.abyssal.player;
+
+import "improbable/entity_state.proto";
+
+import "improbable/abyssal/player/armor_type.proto";
+
+// The player's appearance.
+message AppearanceData {
+  // The armor type.
+  optional improbable.abyssal.player.ArmorType armorType = 1;
+}
+
+extend improbable.EntityState {
+  optional AppearanceData appearance = 1027
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: false
+    }];
+}
+     

@@ -1,0 +1,23 @@
+syntax = "proto2";
+package schema.improbable.abyssal.controls;
+
+import "improbable/entity_state.proto";
+
+
+
+// Controls state.
+message ControlsData {
+  // The current horizontal input.
+  optional float right = 1;
+  // The current vertical input.
+  optional float forward = 2;
+}
+
+extend improbable.EntityState {
+  optional ControlsData controls = 1023
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     

@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Project Schema Definition v1453977053201</title>
+  <style>
+    body {
+            font-family: sans-serif;
+            margin: 0px;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0px;
+            padding-right: 20px;
+            font-style: italic;
+            display: block;
+            font-weight:bold;
+            text-align: right;
+        }
+        h3 {
+          margin-top: 35px;
+        }
+
+        a, a:visited, a:active, a:hover {
+            text-decoration: none;
+        }
+  </style>
+</head>
+<body>
+
+<h1>Schema v1453977053201</h1>
+
+()
+
+<h2>Index</h2>
+
+<h3>Enums</h3>
+<ul><li> <a href='#improbable.abyssal.clients.ClientType'>improbable.abyssal.clients.ClientType</a></li>
+<li> <a href='#improbable.abyssal.controls.ControlsOwnerType'>improbable.abyssal.controls.ControlsOwnerType</a></li>
+<li> <a href='#improbable.abyssal.dev.EntityInfoCategory'>improbable.abyssal.dev.EntityInfoCategory</a></li>
+<li> <a href='#improbable.abyssal.dev.EntityInfoType'>improbable.abyssal.dev.EntityInfoType</a></li>
+<li> <a href='#improbable.abyssal.dev.HandledValueTypes'>improbable.abyssal.dev.HandledValueTypes</a></li>
+<li> <a href='#improbable.abyssal.labels.NatureType'>improbable.abyssal.labels.NatureType</a></li>
+<li> <a href='#improbable.abyssal.labels.PrefabType'>improbable.abyssal.labels.PrefabType</a></li>
+<li> <a href='#improbable.abyssal.labels.SlotPosition'>improbable.abyssal.labels.SlotPosition</a></li>
+<li> <a href='#improbable.abyssal.player.ArmorType'>improbable.abyssal.player.ArmorType</a></li>
+<li> <a href='#improbable.corelib.worker.checkout.EntityLoadingStates'>improbable.corelib.worker.checkout.EntityLoadingStates</a></li>
+<li> <a href='#improbable.entity.physical.CollisionDetectionMode'>improbable.entity.physical.CollisionDetectionMode</a></li>
+<li> <a href='#improbable.entity.physical.InterpolationMode'>improbable.entity.physical.InterpolationMode</a></li>
+<li> <a href='#improbable.entity.physical.PhysicsStrategy'>improbable.entity.physical.PhysicsStrategy</a></li></ul>
+
+<h3>Custom types</h3>
+<ul><li> <a href='#improbable.abyssal.ai.CombatTarget'>improbable.abyssal.ai.CombatTarget</a></li>
+<li> <a href='#improbable.abyssal.dev.ClientInfo'>improbable.abyssal.dev.ClientInfo</a></li>
+<li> <a href='#improbable.abyssal.dev.ClientTypeInfo'>improbable.abyssal.dev.ClientTypeInfo</a></li>
+<li> <a href='#improbable.abyssal.dev.EntityInfo'>improbable.abyssal.dev.EntityInfo</a></li>
+<li> <a href='#improbable.abyssal.physical.SyncedBone'>improbable.abyssal.physical.SyncedBone</a></li>
+<li> <a href='#improbable.corelib.math.Quaternion'>improbable.corelib.math.Quaternion</a></li>
+<li> <a href='#improbable.corelib.math.RelativeTransform'>improbable.corelib.math.RelativeTransform</a></li>
+<li> <a href='#improbable.entity.physical.FreezeConstraints'>improbable.entity.physical.FreezeConstraints</a></li></ul>
+
+<h3>States</h3>
+<ul><li> <a href='#improbable.abyssal.ExampleSTate'>improbable.abyssal.ExampleSTate</a></li>
+<li> <a href='#improbable.abyssal.ai.AIControls'>improbable.abyssal.ai.AIControls</a></li>
+<li> <a href='#improbable.abyssal.ai.CombatAI'>improbable.abyssal.ai.CombatAI</a></li>
+<li> <a href='#improbable.abyssal.ai.MovementTarget'>improbable.abyssal.ai.MovementTarget</a></li>
+<li> <a href='#improbable.abyssal.attributes.Death'>improbable.abyssal.attributes.Death</a></li>
+<li> <a href='#improbable.abyssal.attributes.Health'>improbable.abyssal.attributes.Health</a></li>
+<li> <a href='#improbable.abyssal.attributes.Scale'>improbable.abyssal.attributes.Scale</a></li>
+<li> <a href='#improbable.abyssal.combat.AttackControls'>improbable.abyssal.combat.AttackControls</a></li>
+<li> <a href='#improbable.abyssal.combat.AttackData'>improbable.abyssal.combat.AttackData</a></li>
+<li> <a href='#improbable.abyssal.combat.Attackee'>improbable.abyssal.combat.Attackee</a></li>
+<li> <a href='#improbable.abyssal.controls.Controls'>improbable.abyssal.controls.Controls</a></li>
+<li> <a href='#improbable.abyssal.controls.ControlsOwner'>improbable.abyssal.controls.ControlsOwner</a></li>
+<li> <a href='#improbable.abyssal.debug.FSimDebug'>improbable.abyssal.debug.FSimDebug</a></li>
+<li> <a href='#improbable.abyssal.dev.DevClientInfo'>improbable.abyssal.dev.DevClientInfo</a></li>
+<li> <a href='#improbable.abyssal.dev.EntityInfoListeners'>improbable.abyssal.dev.EntityInfoListeners</a></li>
+<li> <a href='#improbable.abyssal.dev.EntityInfoModifier'>improbable.abyssal.dev.EntityInfoModifier</a></li>
+<li> <a href='#improbable.abyssal.dev.InspectedEntitiesInfo'>improbable.abyssal.dev.InspectedEntitiesInfo</a></li>
+<li> <a href='#improbable.abyssal.dev.InspectorEntitySelectorControls'>improbable.abyssal.dev.InspectorEntitySelectorControls</a></li>
+<li> <a href='#improbable.abyssal.gamemaster.GameMasterControls'>improbable.abyssal.gamemaster.GameMasterControls</a></li>
+<li> <a href='#improbable.abyssal.hierarchy.StartingEquipment'>improbable.abyssal.hierarchy.StartingEquipment</a></li>
+<li> <a href='#improbable.abyssal.labels.Name'>improbable.abyssal.labels.Name</a></li>
+<li> <a href='#improbable.abyssal.light.LightSource'>improbable.abyssal.light.LightSource</a></li>
+<li> <a href='#improbable.abyssal.light.LightTriggers'>improbable.abyssal.light.LightTriggers</a></li>
+<li> <a href='#improbable.abyssal.light.VisibleLightSources'>improbable.abyssal.light.VisibleLightSources</a></li>
+<li> <a href='#improbable.abyssal.light.VisibleLightSourcesTriggers'>improbable.abyssal.light.VisibleLightSourcesTriggers</a></li>
+<li> <a href='#improbable.abyssal.physical.SyncedBones'>improbable.abyssal.physical.SyncedBones</a></li>
+<li> <a href='#improbable.abyssal.player.Appearance'>improbable.abyssal.player.Appearance</a></li>
+<li> <a href='#improbable.abyssal.player.PlayerControls'>improbable.abyssal.player.PlayerControls</a></li>
+<li> <a href='#improbable.corelib.entity.Prefab'>improbable.corelib.entity.Prefab</a></li>
+<li> <a href='#improbable.corelib.entity.nature.NatureData'>improbable.corelib.entity.nature.NatureData</a></li>
+<li> <a href='#improbable.corelib.metrics.ClientPhysicsLatency'>improbable.corelib.metrics.ClientPhysicsLatency</a></li>
+<li> <a href='#improbable.corelib.metrics.ClientPhysicsLatencyReply'>improbable.corelib.metrics.ClientPhysicsLatencyReply</a></li>
+<li> <a href='#improbable.corelib.metrics.EngineLatency'>improbable.corelib.metrics.EngineLatency</a></li>
+<li> <a href='#improbable.corelib.metrics.EngineLatencyReply'>improbable.corelib.metrics.EngineLatencyReply</a></li>
+<li> <a href='#improbable.corelib.physical.Grounded'>improbable.corelib.physical.Grounded</a></li>
+<li> <a href='#improbable.corelib.physical.Physicality'>improbable.corelib.physical.Physicality</a></li>
+<li> <a href='#improbable.corelib.player.PlayerStatus'>improbable.corelib.player.PlayerStatus</a></li>
+<li> <a href='#improbable.corelib.slots.AvailableSlots'>improbable.corelib.slots.AvailableSlots</a></li>
+<li> <a href='#improbable.corelib.slots.DynamicSlots'>improbable.corelib.slots.DynamicSlots</a></li>
+<li> <a href='#improbable.corelib.slots.FollowingOffset'>improbable.corelib.slots.FollowingOffset</a></li>
+<li> <a href='#improbable.corelib.slots.HierarchyNode'>improbable.corelib.slots.HierarchyNode</a></li>
+<li> <a href='#improbable.corelib.slots.Slots'>improbable.corelib.slots.Slots</a></li>
+<li> <a href='#improbable.corelib.slots.VisualizedSlots'>improbable.corelib.slots.VisualizedSlots</a></li>
+<li> <a href='#improbable.corelib.util.EntityOwner'>improbable.corelib.util.EntityOwner</a></li>
+<li> <a href='#improbable.corelib.visual.Visuality'>improbable.corelib.visual.Visuality</a></li>
+<li> <a href='#improbable.corelib.worker.checkout.EntityLoadingControl'>improbable.corelib.worker.checkout.EntityLoadingControl</a></li>
+<li> <a href='#improbable.corelib.worker.checkout.EntityLoadingResponse'>improbable.corelib.worker.checkout.EntityLoadingResponse</a></li>
+<li> <a href='#improbable.corelibrary.activation.Activated'>improbable.corelibrary.activation.Activated</a></li>
+<li> <a href='#improbable.corelibrary.physical.Transform'>improbable.corelibrary.physical.Transform</a></li>
+<li> <a href='#improbable.entity.bot.BotParameters'>improbable.entity.bot.BotParameters</a></li>
+<li> <a href='#improbable.entity.bot.BotTargetVelocity'>improbable.entity.bot.BotTargetVelocity</a></li>
+<li> <a href='#improbable.entity.physical.CollisionState'>improbable.entity.physical.CollisionState</a></li>
+<li> <a href='#improbable.entity.physical.PhysicsSimulation'>improbable.entity.physical.PhysicsSimulation</a></li>
+<li> <a href='#improbable.entity.physical.Position'>improbable.entity.physical.Position</a></li>
+<li> <a href='#improbable.entity.physical.RigidbodyData'>improbable.entity.physical.RigidbodyData</a></li>
+<li> <a href='#improbable.entity.physical.RigidbodyEngineData'>improbable.entity.physical.RigidbodyEngineData</a></li>
+<li> <a href='#improbable.entity.physical.Rotation'>improbable.entity.physical.Rotation</a></li>
+<li> <a href='#improbable.entity.physical.TagsData'>improbable.entity.physical.TagsData</a></li>
+<li> <a href='#improbable.entity.physical.TargetRotation'>improbable.entity.physical.TargetRotation</a></li>
+<li> <a href='#improbable.entity.physical.TeleportAck'>improbable.entity.physical.TeleportAck</a></li>
+<li> <a href='#improbable.entity.physical.TeleportRequest'>improbable.entity.physical.TeleportRequest</a></li>
+<li> <a href='#improbable.game.g3.entity.player.PlayerOrientationControllerData'>improbable.game.g3.entity.player.PlayerOrientationControllerData</a></li>
+<li> <a href='#improbable.input.InputRecordingControllerData'>improbable.input.InputRecordingControllerData</a></li></ul>
+
+
+<h2>Definitions</h2>
+
+<h3>Enums</h3>
+<section class='enum'>
+<h4><a name="improbable.abyssal.clients.ClientType">improbable.abyssal.clients.ClientType</a></h4>
+
+<p>Different client types.</p>
+
+Values: <ul><dfn>Player</dfn>, <dfn>GameMaster</dfn>, <dfn>Dev</dfn>, <dfn>Dummy</dfn></ul>
+
+</section>
+
+<section class='enum'>
+<h4><a name="improbable.abyssal.controls.ControlsOwnerType">improbable.abyssal.controls.ControlsOwnerType</a></h4>
+
+<p>The owner of the controls</p>
+
+Values: <ul><dfn>Client</dfn>, <dfn>FSim</dfn></ul>
+
+</section>
+
+<section class='enum'>
+<h4><a name="improbable.abyssal.dev.EntityInfoCategory">improbable.abyssal.dev.EntityInfoCategory</a></h4>
+
+<p>The category the info falls in for the UI.</p>
+
+Values: <ul><dfn>Stats</dfn>, <dfn>Appearance</dfn>, <dfn>Other</dfn></ul>
+
+</section>
+
+<section class='enum'>
+<h4><a name="improbable.abyssal.dev.EntityInfoType">improbable.abyssal.dev.EntityInfoType</a></h4>
+
+<p>The info type.</p>
+
+Values: <ul><dfn>DevName</dfn>, <dfn>HealthCurrent</dfn>, <dfn>HealthMax</dfn>, <dfn>Scale</dfn></ul>
+
+</section>
+
+<section class='enum'>
+<h4><a name="improbable.abyssal.dev.HandledValueTypes">improbable.abyssal.dev.HandledValueTypes</a></h4>
+
+<p>The handled info types.</p>
+
+Values: <ul><dfn>Int</dfn>, <dfn>Float</dfn>, <dfn>Double</dfn></ul>
+
+</section>
+
+<section class='enum'>
+<h4><a name="improbable.abyssal.labels.NatureType">improbable.abyssal.labels.NatureType</a></h4>
+
+<p>Possible natures that can be built by the game master.</p>
+
+Values: <ul><dfn>Sword</dfn>, <dfn>Spider</dfn>, <dfn>Torch</dfn>, <dfn>Bonfire</dfn></ul>
+
+</section>
+
+<section class='enum'>
+<h4><a name="improbable.abyssal.labels.PrefabType">improbable.abyssal.labels.PrefabType</a></h4>
+
+<p>Possible prefabs that can be built.</p>
+
+Values: <ul><dfn>Spider</dfn>, <dfn>wep_torc_woodentorch01</dfn>, <dfn>wep_swor_honshusword</dfn>, <dfn>Bonfire</dfn></ul>
+
+</section>
+
+<section class='enum'>
+<h4><a name="improbable.abyssal.labels.SlotPosition">improbable.abyssal.labels.SlotPosition</a></h4>
+
+<p>Possible slot positions</p>
+
+Values: <ul><dfn>RightHand</dfn>, <dfn>LeftHand</dfn></ul>
+
+</section>
+
+<section class='enum'>
+<h4><a name="improbable.abyssal.player.ArmorType">improbable.abyssal.player.ArmorType</a></h4>
+
+<p>Armor types.</p>
+
+Values: <ul><dfn>white</dfn>, <dfn>black</dfn>, <dfn>red</dfn></ul>
+
+</section>
+
+<section class='enum'>
+<h4><a name="improbable.corelib.worker.checkout.EntityLoadingStates">improbable.corelib.worker.checkout.EntityLoadingStates</a></h4>
+
+<p></p>
+
+Values: <ul><dfn>Requested</dfn>, <dfn>Loaded</dfn>, <dfn>Error</dfn>, <dfn>Idle</dfn></ul>
+
+</section>
+
+<section class='enum'>
+<h4><a name="improbable.entity.physical.CollisionDetectionMode">improbable.entity.physical.CollisionDetectionMode</a></h4>
+
+<p>Different approaches to collision detection.</p>
+
+Values: <ul><dfn>Discrete</dfn>, <dfn>Continuous</dfn>, <dfn>ContinuousDynamic</dfn></ul>
+
+</section>
+
+<section class='enum'>
+<h4><a name="improbable.entity.physical.InterpolationMode">improbable.entity.physical.InterpolationMode</a></h4>
+
+<p>Different approaches to interpolation.</p>
+
+Values: <ul><dfn>None</dfn>, <dfn>Interpolate</dfn>, <dfn>Extrapolate</dfn></ul>
+
+</section>
+
+<section class='enum'>
+<h4><a name="improbable.entity.physical.PhysicsStrategy">improbable.entity.physical.PhysicsStrategy</a></h4>
+
+<p>How an entity's physical nature should be dealt with.  Exists means it should appear on the physics engine, simulated means a physics engine should be authoritative for it, and none means it should not appear on the physics engine.</p>
+
+Values: <ul><dfn>Simulated</dfn>, <dfn>Exists</dfn>, <dfn>None</dfn></ul>
+
+</section>
+
+
+<h3>Custom types</h3>
+<section class='custom-type'>
+<h4><a name="improbable.abyssal.ai.CombatTarget">improbable.abyssal.ai.CombatTarget</a></h4>
+<p>Info about the combat target.</p>
+
+Properties:
+  <ul>    <li class='property'>targetId: <tt>EntityId</tt> <defn>The target id.</defn></li>
+    <li class='property'>lastKnownLocation: <tt>Coordinates</tt> <defn>The last known location.</defn></li>
+    <li class='property'>isVisible: <tt>bool</tt> <defn>Can we see the target?</defn></li></ul>
+
+</section>
+
+<section class='custom-type'>
+<h4><a name="improbable.abyssal.dev.ClientInfo">improbable.abyssal.dev.ClientInfo</a></h4>
+<p>Info about client types.</p>
+
+Properties:
+  <ul>    <li class='property'>engineId: <tt>string</tt> <defn>The engine id.</defn></li></ul>
+
+</section>
+
+<section class='custom-type'>
+<h4><a name="improbable.abyssal.dev.ClientTypeInfo">improbable.abyssal.dev.ClientTypeInfo</a></h4>
+<p>Info about cliends.</p>
+
+Properties:
+  <ul>    <li class='property'>clients: <tt>Map[EntityId, improbable.abyssal.dev.ClientInfo]</tt> <defn>The clients.</defn></li></ul>
+
+</section>
+
+<section class='custom-type'>
+<h4><a name="improbable.abyssal.dev.EntityInfo">improbable.abyssal.dev.EntityInfo</a></h4>
+<p>Info about an entity</p>
+
+Properties:
+  <ul>    <li class='property'>entityName: <tt>string</tt> <defn>The entity name.</defn></li>
+    <li class='property'>intValues: <tt>Map[improbable.abyssal.dev.EntityInfoType, int32]</tt> <defn>Integer values.</defn></li>
+    <li class='property'>floatValues: <tt>Map[improbable.abyssal.dev.EntityInfoType, float]</tt> <defn>Float values.</defn></li>
+    <li class='property'>doubleValues: <tt>Map[improbable.abyssal.dev.EntityInfoType, double]</tt> <defn>Double values.</defn></li></ul>
+
+</section>
+
+<section class='custom-type'>
+<h4><a name="improbable.abyssal.physical.SyncedBone">improbable.abyssal.physical.SyncedBone</a></h4>
+<p>Information about a synced bone</p>
+
+Properties:
+  <ul>    <li class='property'>localPosition: <tt>Vector3f</tt> <defn>The position of the bone</defn></li>
+    <li class='property'>localRotation: <tt>improbable.corelib.math.Quaternion</tt> <defn>The rotation of the bone</defn></li></ul>
+
+</section>
+
+<section class='custom-type'>
+<h4><a name="improbable.corelib.math.Quaternion">improbable.corelib.math.Quaternion</a></h4>
+<p>Unit quaternions, also known as versors, provide a convenient mathematical way to represent orientations and rotations of objects in three dimensions. Compared to Euler angles they are simpler to compose and avoid the problem of gimbal lock.</p>
+
+Properties:
+  <ul>    <li class='property'>w: <tt>float</tt> <defn></defn></li>
+    <li class='property'>x: <tt>float</tt> <defn></defn></li>
+    <li class='property'>y: <tt>float</tt> <defn></defn></li>
+    <li class='property'>z: <tt>float</tt> <defn></defn></li></ul>
+
+</section>
+
+<section class='custom-type'>
+<h4><a name="improbable.corelib.math.RelativeTransform">improbable.corelib.math.RelativeTransform</a></h4>
+<p>A transform that is relative to another transform.</p>
+
+Properties:
+  <ul>    <li class='property'>position: <tt>Vector3f</tt> <defn>The displacement from the parent transform.</defn></li>
+    <li class='property'>rotation: <tt>improbable.corelib.math.Quaternion</tt> <defn>The relative rotation from the parent transform.</defn></li></ul>
+
+</section>
+
+<section class='custom-type'>
+<h4><a name="improbable.entity.physical.FreezeConstraints">improbable.entity.physical.FreezeConstraints</a></h4>
+<p>Constraints on three dimensional operations.</p>
+
+Properties:
+  <ul>    <li class='property'>x: <tt>bool</tt> <defn></defn></li>
+    <li class='property'>y: <tt>bool</tt> <defn></defn></li>
+    <li class='property'>z: <tt>bool</tt> <defn></defn></li></ul>
+
+</section>
+
+
+<h3>States</h3>
+<section class='state'>
+<h4><a name="improbable.abyssal.ExampleSTate">improbable.abyssal.ExampleSTate</a></h4>
+<p>blah</p>
+
+Properties:
+  <ul></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.ai.AIControls">improbable.abyssal.ai.AIControls</a></h4>
+<p>The ai controls.</p>
+
+Properties:
+  <ul>    <li class='property'>MovementVector: <tt>Vector3d</tt> <defn>The current movement.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.ai.CombatAI">improbable.abyssal.ai.CombatAI</a></h4>
+<p>Info for attacking for the AI</p>
+
+Properties:
+  <ul>    <li class='property'>target: <tt>Option[improbable.abyssal.ai.CombatTarget]</tt> <defn>The current target.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.ai.MovementTarget">improbable.abyssal.ai.MovementTarget</a></h4>
+<p>The target of movement</p>
+
+Properties:
+  <ul>    <li class='property'>target: <tt>Option[Coordinates]</tt> <defn>The target.</defn></li>
+    <li class='property'>stoppingDistance: <tt>float</tt> <defn>The distance to stop from the target.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.attributes.Death">improbable.abyssal.attributes.Death</a></h4>
+<p>Death</p>
+
+Properties:
+  <ul>    <li class='property'>isDead: <tt>bool</tt> <defn>Is the entity dead?.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.attributes.Health">improbable.abyssal.attributes.Health</a></h4>
+<p>The heath</p>
+
+Properties:
+  <ul>    <li class='property'>current: <tt>int32</tt> <defn>The current health.</defn></li>
+    <li class='property'>max: <tt>int32</tt> <defn>The max health</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.attributes.Scale">improbable.abyssal.attributes.Scale</a></h4>
+<p>Entity scale.</p>
+
+Properties:
+  <ul>    <li class='property'>current: <tt>float</tt> <defn>The scale.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.combat.AttackControls">improbable.abyssal.combat.AttackControls</a></h4>
+<p>The player attacking</p>
+
+Properties:
+  <ul></ul>
+
+Events:
+  <ul>  <li>HitEntity</li>
+  <li><defn>The weapon has hit an entity.</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>target: <tt>EntityId</tt> <defn>The hit entity.</defn></li></ul></li>
+       
+  <li>ResetHitEnemies</li>
+  <li><defn>Reset the hit enemies (for another attack</defn></li>
+  <li>Properties: <ul>
+</ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.combat.AttackData">improbable.abyssal.combat.AttackData</a></h4>
+<p>The info for attacks.</p>
+
+Properties:
+  <ul>    <li class='property'>attackRange: <tt>float</tt> <defn>The range of the attack.</defn></li>
+    <li class='property'>cooldown: <tt>float</tt> <defn>The time between attacks in seconds.</defn></li>
+    <li class='property'>cooldownRemaining: <tt>float</tt> <defn>The time remaining in the cooldown in seconds.</defn></li>
+    <li class='property'>hitEnemies: <tt>List[EntityId]</tt> <defn>Enemies hit in the current attack.</defn></li></ul>
+
+Events:
+  <ul>  <li>TriggerAttack</li>
+  <li><defn>Trigger an attack.</defn></li>
+  <li>Properties: <ul>
+</ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.combat.Attackee">improbable.abyssal.combat.Attackee</a></h4>
+<p>Getting attacked.</p>
+
+Properties:
+  <ul></ul>
+
+Events:
+  <ul>  <li>Attacked</li>
+  <li><defn>The entity was attacked</defn></li>
+  <li>Properties: <ul>
+</ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.controls.Controls">improbable.abyssal.controls.Controls</a></h4>
+<p>Controls state.</p>
+
+Properties:
+  <ul>    <li class='property'>right: <tt>float</tt> <defn>The current horizontal input.</defn></li>
+    <li class='property'>forward: <tt>float</tt> <defn>The current vertical input.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.controls.ControlsOwner">improbable.abyssal.controls.ControlsOwner</a></h4>
+<p>Who owns these controls?</p>
+
+Properties:
+  <ul>    <li class='property'>ownerType: <tt>improbable.abyssal.controls.ControlsOwnerType</tt> <defn>The type of the owner.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.debug.FSimDebug">improbable.abyssal.debug.FSimDebug</a></h4>
+<p>FSim debugging tool.</p>
+
+Properties:
+  <ul></ul>
+
+Events:
+  <ul>  <li>DebugMessage</li>
+  <li><defn>A message from the FSim</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>message: <tt>string</tt> <defn>The message.</defn></li></ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.dev.DevClientInfo">improbable.abyssal.dev.DevClientInfo</a></h4>
+<p>The info about connected clients.</p>
+
+Properties:
+  <ul>    <li class='property'>clients: <tt>Map[improbable.abyssal.clients.ClientType, improbable.abyssal.dev.ClientTypeInfo]</tt> <defn>Information about logged in players.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.dev.EntityInfoListeners">improbable.abyssal.dev.EntityInfoListeners</a></h4>
+<p>Info about the entities that are listening.</p>
+
+Properties:
+  <ul>    <li class='property'>listeners: <tt>List[EntityId]</tt> <defn>The entities that are listening.</defn></li></ul>
+
+Events:
+  <ul>  <li>ListenerAdded</li>
+  <li><defn>A listened was added</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>listener: <tt>EntityId</tt> <defn>The listener that was added.</defn></li></ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.dev.EntityInfoModifier">improbable.abyssal.dev.EntityInfoModifier</a></h4>
+<p>Controls to modify entity info.</p>
+
+Properties:
+  <ul>    <li class='property'>canModify: <tt>bool</tt> <defn>Can the entity modify others?</defn></li></ul>
+
+Events:
+  <ul>  <li>SetIntValue</li>
+  <li><defn>Set an int value.</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>entityId: <tt>EntityId</tt> <defn>The entity to modify.</defn></li>
+            <li class='property'>infoType: <tt>improbable.abyssal.dev.EntityInfoType</tt> <defn>The info type.</defn></li>
+            <li class='property'>newValue: <tt>int32</tt> <defn>The new value.</defn></li></ul></li>
+       
+  <li>SetFloatValue</li>
+  <li><defn>Set a float value.</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>entityId: <tt>EntityId</tt> <defn>The entity to modify.</defn></li>
+            <li class='property'>infoType: <tt>improbable.abyssal.dev.EntityInfoType</tt> <defn>The info type.</defn></li>
+            <li class='property'>newValue: <tt>float</tt> <defn>The new value.</defn></li></ul></li>
+       
+  <li>SetDoubleValue</li>
+  <li><defn>Set a double value.</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>entityId: <tt>EntityId</tt> <defn>The entity to modify.</defn></li>
+            <li class='property'>infoType: <tt>improbable.abyssal.dev.EntityInfoType</tt> <defn>The info type.</defn></li>
+            <li class='property'>newValue: <tt>double</tt> <defn>The new value.</defn></li></ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.dev.InspectedEntitiesInfo">improbable.abyssal.dev.InspectedEntitiesInfo</a></h4>
+<p>The info about the inspected entities.</p>
+
+Properties:
+  <ul>    <li class='property'>inspectedEntities: <tt>Map[EntityId, improbable.abyssal.dev.EntityInfo]</tt> <defn>Info about entities.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.dev.InspectorEntitySelectorControls">improbable.abyssal.dev.InspectorEntitySelectorControls</a></h4>
+<p>Controls for selecting entities.</p>
+
+Properties:
+  <ul></ul>
+
+Events:
+  <ul>  <li>SelectEntity</li>
+  <li><defn>Select an entity.</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>entity: <tt>EntityId</tt> <defn>The selected entity.</defn></li></ul></li>
+       
+  <li>DeselectEntity</li>
+  <li><defn>Deselect an entity.</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>entity: <tt>EntityId</tt> <defn>The deselected entity.</defn></li></ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.gamemaster.GameMasterControls">improbable.abyssal.gamemaster.GameMasterControls</a></h4>
+<p>Controls for the game master.</p>
+
+Properties:
+  <ul></ul>
+
+Events:
+  <ul>  <li>BuildEntity</li>
+  <li><defn>Build an entity</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>nature: <tt>improbable.abyssal.labels.NatureType</tt> <defn>The nature to build.</defn></li>
+            <li class='property'>position: <tt>Coordinates</tt> <defn>The position.</defn></li>
+            <li class='property'>rotation: <tt>Vector3d</tt> <defn>The rotation.</defn></li></ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.hierarchy.StartingEquipment">improbable.abyssal.hierarchy.StartingEquipment</a></h4>
+<p>The starting equipment and their slots.</p>
+
+Properties:
+  <ul>    <li class='property'>initialized: <tt>bool</tt> <defn>Have we initialized this?</defn></li>
+    <li class='property'>equipment: <tt>Map[string, improbable.abyssal.labels.NatureType]</tt> <defn>The containing slot to its starting equipment.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>false</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.labels.Name">improbable.abyssal.labels.Name</a></h4>
+<p>The entity name.</p>
+
+Properties:
+  <ul>    <li class='property'>devName: <tt>string</tt> <defn>The name that a dev will see.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.light.LightSource">improbable.abyssal.light.LightSource</a></h4>
+<p>Basic light state.</p>
+
+Properties:
+  <ul>    <li class='property'>on: <tt>bool</tt> <defn>Is the light on?</defn></li>
+    <li class='property'>players: <tt>List[EntityId]</tt> <defn>The players lit by the light.</defn></li>
+    <li class='property'>parentPlayer: <tt>Option[EntityId]</tt> <defn>The lit player parent.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.light.LightTriggers">improbable.abyssal.light.LightTriggers</a></h4>
+<p>The targets that are lit by the light.</p>
+
+Properties:
+  <ul></ul>
+
+Events:
+  <ul>  <li>EntityEnteredLight</li>
+  <li><defn>An entity has entered the light.</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>entityId: <tt>EntityId</tt> <defn>The entity that entered.</defn></li></ul></li>
+       
+  <li>EntityExitedLight</li>
+  <li><defn>An entity has exited the light.</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>entityId: <tt>EntityId</tt> <defn>The entity that exited.</defn></li></ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.light.VisibleLightSources">improbable.abyssal.light.VisibleLightSources</a></h4>
+<p>The light sources visible to the AI.</p>
+
+Properties:
+  <ul>    <li class='property'>lightSources: <tt>List[EntityId]</tt> <defn>The visible light sources.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>false</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.light.VisibleLightSourcesTriggers">improbable.abyssal.light.VisibleLightSourcesTriggers</a></h4>
+<p>Triggers for visible light sources.</p>
+
+Properties:
+  <ul></ul>
+
+Events:
+  <ul>  <li>DetectedLight</li>
+  <li><defn>Detected a light.</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>entityId: <tt>EntityId</tt> <defn>The light.</defn></li></ul></li>
+       
+  <li>LostLight</li>
+  <li><defn>Lost a light.</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>entityId: <tt>EntityId</tt> <defn>The light.</defn></li></ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.physical.SyncedBones">improbable.abyssal.physical.SyncedBones</a></h4>
+<p>The bones we are syncing</p>
+
+Properties:
+  <ul>    <li class='property'>bonesToSync: <tt>List[string]</tt> <defn>The bones we are syncing</defn></li>
+    <li class='property'>syncedInfo: <tt>Map[string, improbable.abyssal.physical.SyncedBone]</tt> <defn>The syncing information of the bones.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.player.Appearance">improbable.abyssal.player.Appearance</a></h4>
+<p>The player's appearance.</p>
+
+Properties:
+  <ul>    <li class='property'>armorType: <tt>improbable.abyssal.player.ArmorType</tt> <defn>The armor type.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.abyssal.player.PlayerControls">improbable.abyssal.player.PlayerControls</a></h4>
+<p>The player controls.</p>
+
+Properties:
+  <ul></ul>
+
+Events:
+  <ul>  <li>StartUsingRightHand</li>
+  <li><defn>Use the item in the left hand</defn></li>
+  <li>Properties: <ul>
+</ul></li>
+       
+  <li>StopUsingRightHand</li>
+  <li><defn>Use the item in the left hand</defn></li>
+  <li>Properties: <ul>
+</ul></li>
+       
+  <li>StartUsingLeftHand</li>
+  <li><defn>Use the item in the left hand</defn></li>
+  <li>Properties: <ul>
+</ul></li>
+       
+  <li>StopUsingLeftHand</li>
+  <li><defn>Use the item in the left hand</defn></li>
+  <li>Properties: <ul>
+</ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.entity.Prefab">improbable.corelib.entity.Prefab</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>name: <tt>string</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.entity.nature.NatureData">improbable.corelib.entity.nature.NatureData</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>natures: <tt>List[string]</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.metrics.ClientPhysicsLatency">improbable.corelib.metrics.ClientPhysicsLatency</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>roundTripMillis: <tt>int32</tt> <defn>(description)</defn></li>
+    <li class='property'>refreshPeriodMillis: <tt>int32</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul>  <li>improbable.corelib.metrics.ClientPhysicsPingSent</li>
+  <li><defn>(description)</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>timestampMillis: <tt>int32</tt> <defn>(description)</defn></li></ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.metrics.ClientPhysicsLatencyReply">improbable.corelib.metrics.ClientPhysicsLatencyReply</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul></ul>
+
+Events:
+  <ul>  <li>improbable.corelib.metrics.ClientPhysicsPingReceived</li>
+  <li><defn>(description)</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>receivedPingTimestampMillis: <tt>int32</tt> <defn>(description)</defn></li></ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.metrics.EngineLatency">improbable.corelib.metrics.EngineLatency</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>roundTripMillis: <tt>int32</tt> <defn>(description)</defn></li>
+    <li class='property'>refreshPeriodMillis: <tt>int32</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul>  <li>improbable.corelib.metrics.EnginePingSent</li>
+  <li><defn>(description)</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>timestampMillis: <tt>int32</tt> <defn>(description)</defn></li></ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.metrics.EngineLatencyReply">improbable.corelib.metrics.EngineLatencyReply</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul></ul>
+
+Events:
+  <ul>  <li>improbable.corelib.metrics.EnginePingReceived</li>
+  <li><defn>(description)</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>receivedPingTimestampMillis: <tt>int32</tt> <defn>(description)</defn></li></ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.physical.Grounded">improbable.corelib.physical.Grounded</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>groundEntityId: <tt>EntityId</tt> <defn>(description)</defn></li>
+    <li class='property'>isGrounded: <tt>bool</tt> <defn>(description)</defn></li>
+    <li class='property'>maximumInclineDegrees: <tt>float</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.physical.Physicality">improbable.corelib.physical.Physicality</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>isPhysical: <tt>bool</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.player.PlayerStatus">improbable.corelib.player.PlayerStatus</a></h4>
+<p></p>
+
+Properties:
+  <ul>    <li class='property'>isConnected: <tt>bool</tt> <defn>Whether the client is connected to the player entity.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.slots.AvailableSlots">improbable.corelib.slots.AvailableSlots</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>slots: <tt>List[string]</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.slots.DynamicSlots">improbable.corelib.slots.DynamicSlots</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>slots: <tt>Map[string, improbable.corelib.math.RelativeTransform]</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.slots.FollowingOffset">improbable.corelib.slots.FollowingOffset</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>offset: <tt>Vector3d</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>false</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.slots.HierarchyNode">improbable.corelib.slots.HierarchyNode</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>parent: <tt>Option[EntityId]</tt> <defn>(description)</defn></li>
+    <li class='property'>children: <tt>List[EntityId]</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.slots.Slots">improbable.corelib.slots.Slots</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>slotToEntityId: <tt>Map[string, EntityId]</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.slots.VisualizedSlots">improbable.corelib.slots.VisualizedSlots</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>slots: <tt>List[string]</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.util.EntityOwner">improbable.corelib.util.EntityOwner</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>ownerId: <tt>Option[string]</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>false</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.visual.Visuality">improbable.corelib.visual.Visuality</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>isVisual: <tt>bool</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.worker.checkout.EntityLoadingControl">improbable.corelib.worker.checkout.EntityLoadingControl</a></h4>
+<p>State to control worker entity loading</p>
+
+Properties:
+  <ul>    <li class='property'>loadedState: <tt>improbable.corelib.worker.checkout.EntityLoadingStates</tt> <defn>Loaded state</defn></li>
+    <li class='property'>tries: <tt>int32</tt> <defn>loading tries</defn></li>
+    <li class='property'>maxTries: <tt>int32</tt> <defn>loading tries</defn></li>
+    <li class='property'>retryWait: <tt>int32</tt> <defn>Time to wait in seconds between retries</defn></li>
+    <li class='property'>triggerCallbackOnTimeout: <tt>bool</tt> <defn>Whether to trigger callback despite timing out</defn></li>
+    <li class='property'>entities: <tt>List[EntityId]</tt> <defn>Entities around player</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelib.worker.checkout.EntityLoadingResponse">improbable.corelib.worker.checkout.EntityLoadingResponse</a></h4>
+<p>Entity load response</p>
+
+Properties:
+  <ul>    <li class='property'>loaded: <tt>bool</tt> <defn>Entities loaded</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelibrary.activation.Activated">improbable.corelibrary.activation.Activated</a></h4>
+<p>Indicates whether an Entity is active or not</p>
+
+Properties:
+  <ul>    <li class='property'>isActive: <tt>bool</tt> <defn>Entity should be activated</defn></li>
+    <li class='property'>activateRequested: <tt>bool</tt> <defn>Entity activation has been requested</defn></li>
+    <li class='property'>activationCallbacksPending: <tt>int32</tt> <defn>Callbacks pending for activation request</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.corelibrary.physical.Transform">improbable.corelibrary.physical.Transform</a></h4>
+<p>Represents the position, rotation and optional pivot of an entity.</p>
+
+Properties:
+  <ul>    <li class='property'>timestamp: <tt>float</tt> <defn>The time in seconds at which this state was updated</defn></li>
+    <li class='property'>position: <tt>EntityPosition</tt> <defn>The location of the entity in world coordinates.</defn></li>
+    <li class='property'>rotation: <tt>improbable.corelib.math.Quaternion</tt> <defn>The orientation of the entity.</defn></li>
+    <li class='property'>pivot: <tt>Option[Coordinates]</tt> <defn>The optional location of the pivot around which to interpolate in world coordinates.</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.entity.bot.BotParameters">improbable.entity.bot.BotParameters</a></h4>
+<p>Parameters that describe an object that can move.</p>
+
+Properties:
+  <ul>    <li class='property'>targetSpeed: <tt>float</tt> <defn>The speed that the entity is trying to achieve.</defn></li>
+    <li class='property'>turnRate: <tt>float</tt> <defn>How quickly the entity can turn.</defn></li>
+    <li class='property'>power: <tt>float</tt> <defn></defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.entity.bot.BotTargetVelocity">improbable.entity.bot.BotTargetVelocity</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>targetVelocity: <tt>Vector3d</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.entity.physical.CollisionState">improbable.entity.physical.CollisionState</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul></ul>
+
+Events:
+  <ul>  <li>improbable.entity.physical.Collision</li>
+  <li><defn>(description)</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>entityHit: <tt>Option[EntityId]</tt> <defn>(description)</defn></li>
+            <li class='property'>point: <tt>Coordinates</tt> <defn>(description)</defn></li>
+            <li class='property'>normal: <tt>Vector3d</tt> <defn>(description)</defn></li>
+            <li class='property'>relativeVelocity: <tt>Vector3d</tt> <defn>(description)</defn></li></ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.entity.physical.PhysicsSimulation">improbable.entity.physical.PhysicsSimulation</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>strategy: <tt>improbable.entity.physical.PhysicsStrategy</tt> <defn>(description)</defn></li>
+    <li class='property'>ownerId: <tt>Option[string]</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.entity.physical.Position">improbable.entity.physical.Position</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>timestamp: <tt>float</tt> <defn>(description)</defn></li>
+    <li class='property'>value: <tt>EntityPosition</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.entity.physical.RigidbodyData">improbable.entity.physical.RigidbodyData</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>mass: <tt>float</tt> <defn>(description)</defn></li>
+    <li class='property'>force: <tt>Vector3d</tt> <defn>(description)</defn></li>
+    <li class='property'>torque: <tt>Vector3d</tt> <defn>(description)</defn></li>
+    <li class='property'>drag: <tt>float</tt> <defn>(description)</defn></li>
+    <li class='property'>angularDrag: <tt>float</tt> <defn>(description)</defn></li>
+    <li class='property'>freezePosition: <tt>improbable.entity.physical.FreezeConstraints</tt> <defn>(description)</defn></li>
+    <li class='property'>freezeRotation: <tt>improbable.entity.physical.FreezeConstraints</tt> <defn>(description)</defn></li>
+    <li class='property'>useGravity: <tt>bool</tt> <defn>(description)</defn></li>
+    <li class='property'>isKinematic: <tt>bool</tt> <defn>(description)</defn></li>
+    <li class='property'>interpolation: <tt>improbable.entity.physical.InterpolationMode</tt> <defn>(description)</defn></li>
+    <li class='property'>collisionDetectionMode: <tt>improbable.entity.physical.CollisionDetectionMode</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul>  <li>improbable.entity.physical.Impulse</li>
+  <li><defn>(description)</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>value: <tt>Vector3d</tt> <defn>(description)</defn></li></ul></li>
+       
+  <li>improbable.entity.physical.SetVelocity</li>
+  <li><defn>(description)</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>value: <tt>Vector3d</tt> <defn>(description)</defn></li></ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.entity.physical.RigidbodyEngineData">improbable.entity.physical.RigidbodyEngineData</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>velocity: <tt>Vector3d</tt> <defn>(description)</defn></li>
+    <li class='property'>angularVelocity: <tt>Vector3d</tt> <defn>(description)</defn></li>
+    <li class='property'>obsoleteCenterOfMass: <tt>Coordinates</tt> <defn>Obsolete do not use</defn></li>
+    <li class='property'>relativeCentreOfMass: <tt>Vector3d</tt> <defn>Centre of mass relative to the entity position</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.entity.physical.Rotation">improbable.entity.physical.Rotation</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>timestamp: <tt>float</tt> <defn>(description)</defn></li>
+    <li class='property'>euler: <tt>Vector3d</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.entity.physical.TagsData">improbable.entity.physical.TagsData</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>tags: <tt>List[string]</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>false</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.entity.physical.TargetRotation">improbable.entity.physical.TargetRotation</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>euler: <tt>Vector3d</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.entity.physical.TeleportAck">improbable.entity.physical.TeleportAck</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>lastExecutedRequestId: <tt>int32</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.entity.physical.TeleportRequest">improbable.entity.physical.TeleportRequest</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>requestId: <tt>int32</tt> <defn>(description)</defn></li>
+    <li class='property'>position: <tt>Coordinates</tt> <defn>(description)</defn></li>
+    <li class='property'>euler: <tt>Vector3d</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.game.g3.entity.player.PlayerOrientationControllerData">improbable.game.g3.entity.player.PlayerOrientationControllerData</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul>    <li class='property'>azimuth: <tt>float</tt> <defn>(description)</defn></li>
+    <li class='property'>pitch: <tt>float</tt> <defn>(description)</defn></li></ul>
+
+Events:
+  <ul></ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>true</tt>
+
+</section>
+
+<section class='state'>
+<h4><a name="improbable.input.InputRecordingControllerData">improbable.input.InputRecordingControllerData</a></h4>
+<p>(description)</p>
+
+Properties:
+  <ul></ul>
+
+Events:
+  <ul>  <li>improbable.input.StartRecording</li>
+  <li><defn>(description)</defn></li>
+  <li>Properties: <ul>
+</ul></li>
+       
+  <li>improbable.input.StopRecording</li>
+  <li><defn>(description)</defn></li>
+  <li>Properties: <ul>
+</ul></li>
+       
+  <li>improbable.input.StartPlayback</li>
+  <li><defn>(description)</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>recordedInput: <tt>string</tt> <defn>(description)</defn></li></ul></li>
+       
+  <li>improbable.input.SaveRecording</li>
+  <li><defn>(description)</defn></li>
+  <li>Properties: <ul>
+            <li class='property'>filePath: <tt>string</tt> <defn>(description)</defn></li></ul></li>
+       </ul>
+
+Synchronized: <tt>true</tt><br />
+
+Queryable: <tt>false</tt>
+
+</section>
+
+
+
+</body>
+</html>

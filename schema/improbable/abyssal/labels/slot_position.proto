@@ -1,0 +1,13 @@
+syntax = "proto2";
+package schema.improbable.abyssal.labels;
+
+import "improbable/entity_state.proto";
+
+
+
+// Possible slot positions
+enum SlotPosition {
+  RIGHTHAND = 0;
+  LEFTHAND = 1;
+}
+       

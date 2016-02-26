@@ -1,0 +1,21 @@
+syntax = "proto2";
+package schema.improbable.abyssal.attributes;
+
+import "improbable/entity_state.proto";
+
+
+
+// Death
+message DeathData {
+  // Is the entity dead?.
+  optional bool isDead = 1;
+}
+
+extend improbable.EntityState {
+  optional DeathData death = 1006
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     

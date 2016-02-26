@@ -1,0 +1,23 @@
+syntax = "proto2";
+package schema.improbable.abyssal.physical;
+
+import "improbable/entity_state.proto";
+
+import "improbable/abyssal/physical/synced_bone.proto";
+
+// The bones we are syncing
+message SyncedBonesData {
+  // The bones we are syncing
+  repeated string bonesToSync = 1;
+  // The syncing information of the bones.
+  map<string, improbable.abyssal.physical.SyncedBone> syncedInfo = 2;
+}
+
+extend improbable.EntityState {
+  optional SyncedBonesData syncedBones = 1008
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     

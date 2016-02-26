@@ -1,0 +1,16 @@
+syntax = "proto2";
+package schema.improbable.abyssal.physical;
+
+import "improbable/entity_state.proto";
+
+import "improbable/math/vector3f.proto";
+import "improbable/corelib/math/quaternion.proto";
+
+// Information about a synced bone
+message SyncedBone {
+    // The position of the bone
+  optional improbable.math.Vector3f localPosition = 1;
+  // The rotation of the bone
+  optional improbable.corelib.math.Quaternion localRotation = 2;
+}
+     

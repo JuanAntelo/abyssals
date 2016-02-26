@@ -1,0 +1,17 @@
+syntax = "proto2";
+package schema.improbable.abyssal.dev;
+
+import "improbable/entity_state.proto";
+
+// Info about an entity
+message EntityInfo {
+    // The entity name.
+  optional string entityName = 1;
+  // Integer values.
+  map<uint32, int32> intValues = 2 [(improbable.key_enum) = "improbable.abyssal.dev.EntityInfoType"];
+  // Float values.
+  map<uint32, float> floatValues = 3 [(improbable.key_enum) = "improbable.abyssal.dev.EntityInfoType"];
+  // Double values.
+  map<uint32, double> doubleValues = 4 [(improbable.key_enum) = "improbable.abyssal.dev.EntityInfoType"];
+}
+     

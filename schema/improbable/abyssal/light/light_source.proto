@@ -1,0 +1,25 @@
+syntax = "proto2";
+package schema.improbable.abyssal.light;
+
+import "improbable/entity_state.proto";
+
+
+
+// Basic light state.
+message LightSourceData {
+  // Is the light on?
+  optional bool on = 1;
+  // The players lit by the light.
+  repeated int64 players = 2 [(improbable.entity_id) = true];
+  // The lit player parent.
+  optional int64 parentPlayer = 3 [(improbable.entity_id) = true, (improbable.option) = true];
+}
+
+extend improbable.EntityState {
+  optional LightSourceData lightSource = 1004
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     

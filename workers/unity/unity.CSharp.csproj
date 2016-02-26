@@ -1,0 +1,820 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7E182C22-A798-BDAD-9C7D-1FF20524B48E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>5.2.2f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_2_2;UNITY_5_2;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_2_2;UNITY_5_2;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="AmplifyColor">
+      <HintPath>Assets\AmplifyColor\Plugins\AmplifyColor.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Assets\Improbable\Dependencies\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Improbable.GelSharp">
+      <HintPath>Assets\Improbable\Dependencies\Improbable.GelSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>Assets\Improbable\Dependencies\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="JWT">
+      <HintPath>Assets\Improbable\Dependencies\JWT.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>Assets\Improbable\Dependencies\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets\Improbable\Dependencies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>Assets\Improbable\Dependencies\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="RakNetCSharpWrapper">
+      <HintPath>Assets\Improbable\Dependencies\RakNetCSharpWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>Assets\Improbable\Dependencies\System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="PKFx-Helper">
+      <HintPath>Assets\PopcornFX\Scripts\PKFx-Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="PKFx-Runtime">
+      <HintPath>Assets\PopcornFX\Scripts\PKFx-Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="PKFxManager">
+      <HintPath>Assets\PopcornFX\Scripts\PKFxManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-UnityScript-firstpass">
+      <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorBase.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorEffect.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorTriggerProxy.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorTriggerProxy2D.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorTriggerProxyBase.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorVolume.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorVolume2D.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorVolumeBase.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Runtime\VersionInfo.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Runtime\VolumeEffects.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Runtime\VolumeEffectsFlags.cs" />
+    <Compile Include="Assets\Bootstrap.cs" />
+    <Compile Include="Assets\DeferredNV\DeferredNightVisionEffect.cs" />
+    <Compile Include="Assets\EntityPrefabs\Player\Code\IKHands.cs" />
+    <Compile Include="Assets\EntityPrefabs\Player\Code\SmoothFollow.cs" />
+    <Compile Include="Assets\EntityPrefabs\Player\Code\WarriorAnimationDemoFREE.cs" />
+    <Compile Include="Assets\EntityPrefabs\VFX\FireLightScript.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\ExampleSTate.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\ExampleSTateData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\ai\AIControls.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\ai\AIControlsData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\ai\CombatAI.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\ai\CombatAIData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\ai\CombatTarget.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\ai\MovementTarget.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\ai\MovementTargetData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\attributes\Death.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\attributes\DeathData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\attributes\Health.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\attributes\HealthData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\attributes\Scale.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\attributes\ScaleData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\clients\ClientType.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\combat\AttackControls.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\combat\AttackControlsData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\combat\AttackData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\combat\AttackDataData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\combat\Attacked.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\combat\Attackee.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\combat\AttackeeData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\combat\HitEntity.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\combat\ResetHitEnemies.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\combat\TriggerAttack.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\controls\Controls.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\controls\ControlsData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\controls\ControlsOwner.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\controls\ControlsOwnerData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\controls\ControlsOwnerType.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\debug\DebugMessage.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\debug\FSimDebug.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\debug\FSimDebugData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\ClientInfo.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\ClientTypeInfo.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\DeselectEntity.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\DevClientInfo.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\DevClientInfoData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\EntityInfo.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\EntityInfoCategory.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\EntityInfoListeners.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\EntityInfoListenersData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\EntityInfoModifier.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\EntityInfoModifierData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\EntityInfoType.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\HandledValueTypes.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\InspectedEntitiesInfo.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\InspectedEntitiesInfoData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\InspectorEntitySelectorControls.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\InspectorEntitySelectorControlsData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\ListenerAdded.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\SelectEntity.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\SetDoubleValue.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\SetFloatValue.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\dev\SetIntValue.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\gamemaster\BuildEntity.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\gamemaster\GameMasterControls.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\gamemaster\GameMasterControlsData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\hierarchy\StartingEquipment.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\hierarchy\StartingEquipmentData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\labels\Name.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\labels\NameData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\labels\NatureType.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\labels\PrefabType.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\labels\SlotPosition.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\light\DetectedLight.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\light\EntityEnteredLight.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\light\EntityExitedLight.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\light\LightSource.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\light\LightSourceData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\light\LightTriggers.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\light\LightTriggersData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\light\LostLight.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\light\VisibleLightSources.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\light\VisibleLightSourcesData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\light\VisibleLightSourcesTriggers.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\light\VisibleLightSourcesTriggersData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\physical\SyncedBone.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\physical\SyncedBones.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\physical\SyncedBonesData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\player\Appearance.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\player\AppearanceData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\player\ArmorType.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\player\PlayerControls.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\player\PlayerControlsData.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\player\StartUsingLeftHand.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\player\StartUsingRightHand.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\player\StopUsingLeftHand.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\improbable\abyssal\player\StopUsingRightHand.cs" />
+    <Compile Include="Assets\Gamelogic\Generated\schema\ProtoMessages.cs" />
+    <Compile Include="Assets\Gamelogic\Src\AI\CreatureFSimAttackVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\AI\CreatureMovementControllerBehaviour.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Animation\AnimationBools.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Animation\CreatureAnimationControllerBehaviour.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Audio\LightAudioVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Audio\PlayWwiseEventOnAnim.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Audio\PlayerAudioFootstep.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Audio\ScaleAudioVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Combat\AttackedVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Combat\HitTriggerBehaviour.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Combat\WeaponAttackAnimationBehaviour.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Combat\WeaponAttackVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Dev\DevMovementVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Dev\EntityInfoModifierVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Dev\EntityInspectorVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Dev\InteractionMode.cs" />
+    <Compile Include="Assets\Gamelogic\Src\GameMaster\GameMasterEntityBuilderVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\GameMaster\GameMasterMovementVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Light\EnableOnLocalPlayerVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Light\LightDetectorTriggerBehaviour.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Light\LightDetectorVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Light\LightTargetsVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Light\LightVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Light\StayBetweenPlayerAndCameraBehaviour.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Movement\IMovementControls.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Movement\RTSMovementControls.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Movement\SpectatorMovementControls.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Physical\ClientSideAuthorityPreprocessor.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Physical\ClientSidePositionVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Physical\PlayerInterpolatingPositionVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Physical\PlayerInterpolatingRotationVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Physical\RemoveAnimatorOnFsimPreProcessor.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Physical\ScaleVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Physical\SyncBonesClientVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Physical\SyncBonesFSimVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Player\ArmorTypeVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Player\MainCameraController.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Player\MovementControllerHelper.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Player\PlayerAttackVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Player\PlayerCameraBehaviour.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Player\PlayerControllerVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Player\PlayerInputController.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Player\PlayerMovementControllerBehaviour.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Player\PlayerPreProcessor.cs" />
+    <Compile Include="Assets\Gamelogic\Src\UI\DevClientInfo\DevClientInfoVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\UI\DisplayHealthBarVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\UI\Draggable.cs" />
+    <Compile Include="Assets\Gamelogic\Src\UI\EntityInspector\EntityInfoModifierBehaviour.cs" />
+    <Compile Include="Assets\Gamelogic\Src\UI\EntityInspector\EntityInfoVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\UI\EntityInspector\InfoLineBehaviour.cs" />
+    <Compile Include="Assets\Gamelogic\Src\UI\FaceCameraBehaviour.cs" />
+    <Compile Include="Assets\Gamelogic\Src\UI\GameMasterUIControls.cs" />
+    <Compile Include="Assets\Gamelogic\Src\UI\HealthBarBehaviour.cs" />
+    <Compile Include="Assets\Gamelogic\Src\UI\ICanvasListener.cs" />
+    <Compile Include="Assets\Gamelogic\Src\UI\Knowledge\EntityIdKnowledgeBehaviour.cs" />
+    <Compile Include="Assets\Gamelogic\Src\UI\Knowledge\LocalPlayerKnowledgeBehaviour.cs" />
+    <Compile Include="Assets\Gamelogic\Src\UI\Knowledge\ValueTypeKnowledgeBehaviour.cs" />
+    <Compile Include="Assets\Gamelogic\Src\UI\PlayerHealthBarVisualizer.cs" />
+    <Compile Include="Assets\Gamelogic\Src\UI\ResizeUIPanel.cs" />
+    <Compile Include="Assets\Gamelogic\Src\UI\UICreatorBehaviour.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Util\FindUtil.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Util\HierarchyUtil.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Util\Layers.cs" />
+    <Compile Include="Assets\Gamelogic\Src\Util\VectorUtil.cs" />
+    <Compile Include="Assets\Gamelogic\Src\VFX\LightFXVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Activation\Generated\improbable\corelib\worker\checkout\EntityLoadingControl.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Activation\Generated\improbable\corelib\worker\checkout\EntityLoadingControlData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Activation\Generated\improbable\corelib\worker\checkout\EntityLoadingResponse.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Activation\Generated\improbable\corelib\worker\checkout\EntityLoadingResponseData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Activation\Generated\improbable\corelibrary\activation\Activated.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Activation\Generated\improbable\corelibrary\activation\ActivatedData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Activation\Generated\schema\ProtoMessages.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Activation\Worker\Checkout\EntityLoadingChecker.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Core\Generated\improbable\corelib\entity\Prefab.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Core\Generated\improbable\corelib\entity\PrefabData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Core\Generated\improbable\corelib\entity\nature\NatureData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Core\Generated\improbable\corelib\entity\nature\NatureDataData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Core\Generated\improbable\entity\physical\TagsData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Core\Generated\improbable\entity\physical\TagsDataData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Core\Generated\schema\ProtoMessages.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Delegation\Generated\improbable\corelib\physical\Physicality.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Delegation\Generated\improbable\corelib\physical\PhysicalityData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Delegation\Generated\improbable\corelib\util\EntityOwner.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Delegation\Generated\improbable\corelib\util\EntityOwnerData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Delegation\Generated\improbable\corelib\visual\Visuality.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Delegation\Generated\improbable\corelib\visual\VisualityData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Delegation\Generated\improbable\entity\physical\PhysicsSimulation.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Delegation\Generated\improbable\entity\physical\PhysicsSimulationData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Delegation\Generated\schema\ProtoMessages.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Collections\CircularFifoQueue.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Csp\CircularBufferValueHistory.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Csp\IHistoryCorrection.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Csp\IValueHistory.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Csp\Position\PositionInterpolation.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Csp\Position\PositionStateValueSource.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Csp\Position\PositionSynchroniser.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Csp\Position\RigidbodyPositionValue.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\math\RelativeTransform.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\metrics\ClientPhysicsLatency.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\metrics\ClientPhysicsLatencyData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\metrics\ClientPhysicsLatencyReply.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\metrics\ClientPhysicsLatencyReplyData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\metrics\ClientPhysicsPingReceived.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\metrics\ClientPhysicsPingSent.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\metrics\EngineLatency.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\metrics\EngineLatencyData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\metrics\EngineLatencyReply.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\metrics\EngineLatencyReplyData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\metrics\EnginePingReceived.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\metrics\EnginePingSent.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\physical\Grounded.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\physical\GroundedData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\player\PlayerStatus.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\player\PlayerStatusData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\slots\AvailableSlots.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\slots\AvailableSlotsData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\slots\DynamicSlots.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\slots\DynamicSlotsData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\slots\FollowingOffset.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\slots\FollowingOffsetData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\slots\HierarchyNode.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\slots\HierarchyNodeData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\slots\Slots.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\slots\SlotsData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\slots\VisualizedSlots.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelib\slots\VisualizedSlotsData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelibrary\physical\Transform.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\corelibrary\physical\TransformData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\Collision.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\CollisionState.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\CollisionStateData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\FreezeConstraints.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\Impulse.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\Position.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\PositionData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\RigidbodyData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\RigidbodyDataData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\RigidbodyEngineData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\RigidbodyEngineDataData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\Rotation.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\RotationData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\SetVelocity.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\TargetRotation.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\TargetRotationData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\TeleportAck.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\TeleportAckData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\TeleportRequest.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\improbable\entity\physical\TeleportRequestData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Generated\schema\ProtoMessages.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Interpolation\DelayedLinearInterpolator.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Interpolation\IStreamingValueInterpolator.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Interpolation\PositionInterpolator.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Interpolation\RelativePositionInterpolator.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Interpolation\RotationInterpolator.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Interpolation\TimestampedValue.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\LagDetection\ClientLagDetector.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\LagDetection\GSimLatency.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\LagDetection\PhysicsLagPingReceiver.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Metrics\PhysicsLagValueSource.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\ClientRotation.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\CollisionBehaviour.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\ComposedTransformObservationParameters.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\DefaultPhysicalParameters.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\GroundedChecker.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\HierarchyNodeInfo.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\IHierarchyNodeRegistrable.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\PhysicalBase.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\PhysicalPosition.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\PhysicalRotation.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\RigidbodySync.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\ThresholdBasedUpdateNotifier.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\Visualizers\IRigidbodyVelocitiesVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\Visualizers\IRigidbodyVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\Visualizers\InitialPositionVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\Visualizers\InitialRotationVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\Visualizers\RigidbodyParametersBinder.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\Visualizers\RigidbodyPositionVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\Visualizers\RigidbodyRotationVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Physical\Visualizers\RigidbodyVelocitiesBinder.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\PrefabExporting\PreProcessors\LagDetectingPreProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\PrefabExporting\PreProcessors\NonRigidbodyPreProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\PrefabExporting\PreProcessors\NonRigidbodyTransformPreProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\PrefabExporting\PreProcessors\PreProcessorBase.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\PrefabExporting\PreProcessors\PreProcessorTools.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\PrefabExporting\PreProcessors\RigidbodyPreProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\PrefabExporting\PreProcessors\RigidbodyTransformPreProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\PrefabExporting\PreProcessors\StaticbodyPreProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\PrefabExporting\PreProcessors\TransformPreProcessorBase.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\PrefabExporting\PreProcessors\VisualizerPreprocessorConfig.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Slots\DynamicSlotsContainerVisualizers.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Slots\SlotLocator.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Slots\VisualizedSlotsReporter.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Slots\Visualizers\DisabledWatcher.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Slots\Visualizers\DynamicSlotsVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Slots\Visualizers\SlotContainerVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Slots\Visualizers\VisibilityVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Slots\Visualizers\VisualityWatcher.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Util\IReadWriteValue.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Util\ITimeSource.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Util\IValueInterpolation.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Util\IValueSource.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Util\QuaternionUtils.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Util\UnityTimeSource.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Util\Vector3Utils.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Visualizers\InterpolatingPositionVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Visualizers\InterpolatingRotationVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Visualizers\PositionVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Visualizers\RigidbodyVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Visualizers\TargetRotationVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Visualizers\TeleportVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Visualizers\Transform\InterpolatingTransformVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Visualizers\Transform\PhysicalTransform.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Visualizers\Transform\RigidbodyTransformVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Visualizers\Transform\TeleportTransformVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Main\Visualizers\Transform\TransformVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Math\Generated\improbable\corelib\math\Quaternion.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Math\Generated\schema\ProtoMessages.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\PreProcessor\Global\GameObjectComponentAdder.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\PreProcessor\Global\GlobalPreProcessingTemplateProvider.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\PreProcessor\Global\GlobalPreProcessorApplyingGameObjectLoader.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\PreProcessor\Global\GlobalPreprocessors.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\PreProcessor\PrefabComponentRemovingPreprocessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\WorkerSpecific\WorkerSpecificAssetDatabaseTemplateProvider.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\WorkerSpecific\WorkerSpecificPrefabName.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\WorkerSpecific\WorkerSpecificTemplateProvider.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Generated\improbable\entity\bot\BotParameters.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Generated\improbable\entity\bot\BotParametersData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Generated\improbable\entity\bot\BotTargetVelocity.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Generated\improbable\entity\bot\BotTargetVelocityData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Generated\improbable\game\g3\entity\player\PlayerOrientationControllerData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Generated\improbable\game\g3\entity\player\PlayerOrientationControllerDataData.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Generated\schema\ProtoMessages.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Player\PlayerOrientationController.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\PreProcessors\BotPreProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\CoreLibrary\Visualizers\ForceBasedBotMovementVisualizer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Assets\AssetBundleDownloader.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Assets\AssetCoords.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Assets\BehaviourEngineCompatibilityCache.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Assets\CachingAssetDatabase.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Assets\ConcurrentAssetPrecacher.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Assets\GameObjectFromAssetBundleLoader.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Assets\LocalAssetBundleLoader.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Assets\PrefabCompiler.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Assets\PrefabGameObjectLoader.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Assets\PreprocessingGameObjectLoader.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Camera\ICameraManager.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Camera\UnityCameraManager.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\ClientMetrics.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\ComponentFactory\PooledPrefabContainer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\ComponentFactory\PooledPrefabFactory.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\ComponentFactory\PrefabFactoryMetrics.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\ComponentFactory\UnityPrefabFactory.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\CoordinateSystem.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Core\CloudAssemblyArtifactResolver.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Core\CloudDeployment.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Core\CloudDeploymentList.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Core\ConfigNames.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Core\EngineConfiguration.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Core\EngineLifecycleManager.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Core\GameRoot.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Core\ListShuffle.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Core\LocalDeployment.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Core\Math\Vector3UnityExtension.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Core\QueueManager.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Core\QueueStatus.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Core\SteamTokenExchange.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Core\UnityEngineConfigurator.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Core\UnityEngineEvents.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\EnginePlatform.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\EngineTypeUtils.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\AssetDatabaseTemplateProvider.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\DefaultTemplateProvider.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\EntityAssetId.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\EntityObject.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\EntityObjectStorage.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\EntityStateContainer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\EntityVisualizers.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\IEntityFactory.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\IEntityObject.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\IEntityObserverFactory.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\IEntityTemplateProvider.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\IEntityVisualizers.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\IPrefabFactory.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\IUniverse.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\IVisualizerActivator.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\MonoBehaviourActivator.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\UnityEntityFactory.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Entity\Universe.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Export\IPrefabExportProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Export\KeepOnExportedPrefabAttribute.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\InputEventsSerializer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\InputSourceManager.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Queues\AxisInputQueue.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Queues\ButtonInputQueue.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Queues\IInputQueue.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Queues\InputQueue.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Recording\InputRecorder.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Sources\IAxisInputSource.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Sources\IButtonInputSource.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Sources\IInputSource.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Sources\IKeyInputSource.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Sources\IMouseButtonInputSource.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Sources\PlaybackInputSource.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Sources\RecordedInputSource.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Sources\UnityInputSource.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Storage\AxesInputTimeline.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Storage\ButtonInputTimeline.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Storage\InputEvent.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Storage\InputEventFactory.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Storage\InputTimeline.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Storage\KeyInputTimeline.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Input\Storage\MouseButtonInputTimeline.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\IoC\Binder.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\IoC\Container.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\IoC\GameObjectFactory.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\IoC\IContextRoot.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\IoC\IInitialize.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\IoC\InjectAttribute.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\IoC\MonoBehaviourFactory.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\IoC\MonoInjection.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\IoC\UnityContainer.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\IoC\UnityContext.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Locator\DeploymentInfo.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Locator\DeploymentLocatorService.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Logging\ConsoleLogListener.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Logging\EngineBridgeAppender.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Logging\ExceptionConsoleLogListener.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Logging\LoggerConfigurationLoader.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Logging\UnityConsoleAppender.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Logging\UnityTraceListener.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Logging\ValionLogAppender.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Logging\ValionLogWindow.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\MessageProcessors\AddEntityMessageProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\MessageProcessors\AddStateMessageProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\MessageProcessors\AssetLoadRequestProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\MessageProcessors\DeferEntityCreationDispatcher.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\MessageProcessors\DelegateStateMessageProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\MessageProcessors\EntityMessageBatch.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\MessageProcessors\EntityMessageBatchProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\MessageProcessors\EntityStateMessageProcessorBase.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\MessageProcessors\MessageQueue.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\MessageProcessors\OpCodesDispatcherProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\MessageProcessors\PingMessageProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\MessageProcessors\RemoveEntityMessageProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\MessageProcessors\RemoveStateMessageProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\MessageProcessors\StateUpdateMessageProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\MessageProcessors\UndelegateStateMessageProcessor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Receptionist\ReceptionistClient.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Receptionist\ReceptionistConnector.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\RovingOrigin\CameraLocalRovingOrigin.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\RovingOrigin\CoordinateRemapper.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\RovingOrigin\DefaultRovingOriginBase.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\RovingOrigin\GameObjectMidPointRovingOrigin.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\State\StateMetadataLookup.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\UnityExtension\GameObjectExtensions.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\User\User.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Util\EngineMetricsFPS.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Util\EngineMetricsMemoryUsage.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Util\EngineTypeDisplay.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Util\MetricsReporter.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Util\MetricsUnityGui.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Util\UnityPrefabPaths.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Util\UnityVector3Utils.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Visualizer\DontAutoEnableAttribute.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Visualizer\EngineTypeAttribute.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Visualizer\IVisualizerExtractor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Visualizer\RequireAttribute.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Visualizer\VisualizerExtractor.cs" />
+    <Compile Include="Assets\Improbable\Dependencies\Unity\Visualizer\VisualizerMetadataLookup.cs" />
+    <Compile Include="Assets\Scripts\BlurEffect.cs" />
+    <Compile Include="Assets\Scripts\ColorCorrectionEffect.cs" />
+    <Compile Include="Assets\Scripts\ContrastStretchEffect.cs" />
+    <Compile Include="Assets\Scripts\GlowEffect.cs" />
+    <Compile Include="Assets\Scripts\GrayscaleEffect.cs" />
+    <Compile Include="Assets\Scripts\ImageEffectBase.cs" />
+    <Compile Include="Assets\Scripts\ImageEffects.cs" />
+    <Compile Include="Assets\Scripts\MotionBlur.cs" />
+    <Compile Include="Assets\Scripts\NoiseEffect.cs" />
+    <Compile Include="Assets\Scripts\SSAOEffect.cs" />
+    <Compile Include="Assets\Scripts\SepiaToneEffect.cs" />
+    <Compile Include="Assets\Scripts\TwirlEffect.cs" />
+    <Compile Include="Assets\Scripts\VortexEffect.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AKRESULT.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkActionOnEventType.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkAudioFormat.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkAuxSendValue.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkBankContent.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkBusType.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkCallbackSerializer.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkCallbackType.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkChannelConfig.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkChannelConfigType.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkChannelOrdering.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkConnectionType.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkCurveInterpolation.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkDeviceSettings.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkExternalSourceInfo.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkGroupType.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkInitSettings.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkListenerPosition.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkMemSettings.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkMeteringFlags.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkMusicPlaylistCallbackInfo.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkMusicSettings.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkNodeType.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkObjectInfo.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkOutputSettings.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkPannerType.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkPanningRule.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkPlaylistArray.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkPositionSourceType.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkPositioningInfo.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkRamp.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkSegmentInfo.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkSoundPosition.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkSourceSettings.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkStreamMgrSettings.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\AkVector.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\DynamicSequenceType.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\EnvelopePoint.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\ErrorCode.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\ErrorLevel.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\Iterator.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\MultiPositionType.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\Playlist.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\PlaylistItem.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\PreparationType.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\RTPCValue_type.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\WwiseObjectID.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\WwiseObjectIDext.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\_ArrayPoolDefault.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\_ArrayPoolLEngineDefault.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Linux\AkAudioAPI_Linux.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Linux\AkAudioOutputType_Linux.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Linux\AkMemPoolAttributes_Linux.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Linux\AkPlatformInitSettings_Linux.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Linux\AkSoundEnginePINVOKE_Linux.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Linux\AkSoundEngine_Linux.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Linux\AkThreadProperties_Linux.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Windows\AkAudioAPI_Windows.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Windows\AkAudioOutputType_Windows.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Windows\AkMemPoolAttributes_Windows.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Windows\AkPlatformInitSettings_Windows.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Windows\AkSoundEnginePINVOKE_Windows.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Windows\AkSoundEngine_Windows.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Windows\AkSoundQuality_Windows.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Generated\Windows\AkThreadProperties_Windows.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Handwritten\AkAutoObject.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Handwritten\AkAuxSendArray.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Handwritten\AkCallbackManager.cs" />
+    <Compile Include="Assets\Wwise\Deployment\API\Handwritten\AkPositionArray.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkAmbient.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkAudioListener.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkBank.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkBankManager.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkBasePathGetter.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkDragDropHelper.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkEnvironment.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkEnvironmentPortal.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkEvent.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkEventCallbackData.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkGameObj.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkGameObjEnvironmentData.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkGameObjPositionData.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkGameObjPositionOffsetData.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkInitializer.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkMemBankLoader.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkState.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkSwitch.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkTerminator.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkTriggerBase.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkTriggerCollisionEnter.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkTriggerCollisionExit.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkTriggerDisable.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkTriggerEnable.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkTriggerEnter.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkTriggerExit.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkTriggerMouseDown.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkTriggerMouseEnter.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkTriggerMouseExit.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkTriggerMouseUp.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkUnityEventHandler.cs" />
+    <Compile Include="Assets\Wwise\Deployment\Components\AkUtilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\AmplifyColor\Readme.txt" />
+    <None Include="Assets\AmplifyColor\Resources\Base.shader" />
+    <None Include="Assets\AmplifyColor\Resources\Blend.shader" />
+    <None Include="Assets\AmplifyColor\Resources\BlendCache.shader" />
+    <None Include="Assets\AmplifyColor\Resources\Common.cginc" />
+    <None Include="Assets\AmplifyColor\Resources\DepthMask.shader" />
+    <None Include="Assets\AmplifyColor\Resources\DepthMaskBlend.shader" />
+    <None Include="Assets\AmplifyColor\Resources\Mask.shader" />
+    <None Include="Assets\AmplifyColor\Resources\MaskBlend.shader" />
+    <None Include="Assets\AmplifyColor\Resources\ProcessOnly.shader" />
+    <None Include="Assets\DeferredNV\DeferredNightVision.shader" />
+    <None Include="Assets\PopcornFX\README.txt" />
+    <None Include="Assets\PopcornFX\Resources\PKFxDistQuickDirtyBlurEffect.shader" />
+    <None Include="Assets\PopcornFX\Resources\PKFxDistortionEffect.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\BlendModesOverlay.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\BlurEffectConeTaps.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\CameraMotionBlur.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\CameraMotionBlurDX11.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ChromaticAberrationShader.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ColorCorrection3DLut.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ColorCorrectionCurves.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ColorCorrectionCurvesSimple.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ColorCorrectionEffect.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ColorCorrectionSelective.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\Contrast Stretch\Adaptation.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\Contrast Stretch\Apply.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\Contrast Stretch\Luminance.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\Contrast Stretch\MinMaxReduction.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ContrastComposite.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ConvertDepth.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\CreaseApply.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\EdgeDetectNormals.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\FisheyeShader.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\GlobalFog.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\GlowCompose.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\GlowConeTap.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\GlowEffectDownsample.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\GrayscaleEffect.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\MotionBlur.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\MotionBlurClear.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\NoiseAndGrain.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\NoiseAndGrainDX11.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\NoiseEffectShaderYUV.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\PrepareSunShaftsBlur.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\RadialBlur.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\SSAOShader.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ScreenSpaceAmbientObscurance.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\SepiaToneEffect.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\ShowAlphaChannel.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\SimpleClear.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\SunShaftsComposite.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\Tonemapper.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\TwirlEffect.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\VignettingShader.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\VortexEffect.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_Antialiasing\DLAA.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_Antialiasing\FXAA3Console.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_Antialiasing\FXAAPreset3.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_Antialiasing\NFAA.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_Antialiasing\SSAA.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\Blend.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\MobileBloom.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\MobileBlur.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_BloomAndFlares\VignetteShader.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_DepthOfField\Bokeh34.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_DepthOfField\DepthOfField34.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
+    <None Include="Assets\Scripts\_Sources\Shaders\frag_ao.cginc" />
+    <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Tonemapper.shader" />
+    <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+    <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+    <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+    <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+    <None Include="Assets\StreamingAssets\desc.txt" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Diffuse Terrain\UVFreeLegacyTerrainDiffuseAddPass.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Diffuse Terrain\UVFreeLegacyTerrainDiffuseFirstPass.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Diffuse\UVFreeLegacyDiffuse.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Diffuse\UVFreeLegacyDiffuseTopBottom.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Specular Terrain\UVFreeLegacyTerrainSpecular-AddPass.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Specular Terrain\UVFreeLegacyTerrainSpecular-Base.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Specular Terrain\UVFreeLegacyTerrainSpecular-FirstPass.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Specular\UVFreeLegacySpecular.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Legacy\Specular\UVFreeLegacySpecularTopBottom.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Metallic Terrain\UVFreeTerrainStandardMetallic-AddPass.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Metallic Terrain\UVFreeTerrainStandardMetallic-Base.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Metallic Terrain\UVFreeTerrainStandardMetallic-FirstPass.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Metallic\UVFreeStandardMetallic.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Metallic\UVFreeStandardMetallicTopBottom.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Specular Terrain\UVFreeTerrainStandardSpecular-AddPass.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Specular Terrain\UVFreeTerrainStandardSpecular-Base.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Specular Terrain\UVFreeTerrainStandardspecular-FirstPass.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Specular\UVFreeStandardSpecular.shader" />
+    <None Include="Assets\UVFreeShaders\Shaders\UVFree\Standard PBR\Standard Specular\UVFreeStandardSpecularTopBottom.shader" />
+    <None Include="Assets\UVFreeShaders\readme.txt" />
+    <None Include="Assets\Wwise\Readme.txt" />
+    <None Include="Assets\Wwise\Version.txt" />
+    <None Include="Assets\WwiseSettings.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
+</Project>

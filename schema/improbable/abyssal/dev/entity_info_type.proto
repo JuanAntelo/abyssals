@@ -1,0 +1,15 @@
+syntax = "proto2";
+package schema.improbable.abyssal.dev;
+
+import "improbable/entity_state.proto";
+
+
+
+// The info type.
+enum EntityInfoType {
+  DEVNAME = 0;
+  HEALTHCURRENT = 1;
+  HEALTHMAX = 2;
+  SCALE = 3;
+}
+       

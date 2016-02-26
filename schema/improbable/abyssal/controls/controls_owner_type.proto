@@ -1,0 +1,13 @@
+syntax = "proto2";
+package schema.improbable.abyssal.controls;
+
+import "improbable/entity_state.proto";
+
+
+
+// The owner of the controls
+enum ControlsOwnerType {
+  CLIENT = 0;
+  FSIM = 1;
+}
+       

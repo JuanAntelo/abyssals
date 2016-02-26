@@ -1,0 +1,28 @@
+syntax = "proto2";
+package schema.improbable.abyssal.dev;
+
+import "improbable/entity_state.proto";
+
+
+
+// Events
+// A listened was added
+message ListenerAdded {
+    // The listener that was added.
+  optional int64 listener = 1 [(improbable.entity_id) = true];
+}
+     
+// Info about the entities that are listening.
+message EntityInfoListenersData {
+  // The entities that are listening.
+  repeated int64 listeners = 1 [(improbable.entity_id) = true];  repeated ListenerAdded listenerAdded = 1000 [(improbable.state_event) = true];
+}
+
+extend improbable.EntityState {
+  optional EntityInfoListenersData entityInfoListeners = 1018
+    [(improbable.entity_state_options) = {
+      state_synchronized: true
+      state_queryable: true
+    }];
+}
+     
